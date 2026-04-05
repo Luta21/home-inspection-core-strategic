@@ -61,53 +61,63 @@ export function AboutSection() {
 
       // Each card fades/slides in as you scroll
       gsap.utils.toArray<HTMLElement>('.about-card').forEach((card, i) => {
-        gsap.from(card, {
-          y: 60,
-          opacity: 0,
-          duration: 0.8,
-          ease: ANIM.ease.luxe,
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 85%',
-            toggleActions: 'play none none none',
-          },
-        })
+        gsap.fromTo(card,
+          { y: 60, opacity: 0 },
+          {
+            y: 0, opacity: 1,
+            duration: 0.8,
+            ease: ANIM.ease.luxe,
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 85%',
+              toggleActions: 'play none none none',
+            },
+          }
+        )
       })
     })
 
     // Mobile — simple stagger
     mm.add('(max-width: 1023px)', () => {
-      gsap.from('.about-card', {
-        y: 40,
-        opacity: 0,
-        duration: 0.7,
-        stagger: 0.15,
-        ease: ANIM.ease.luxe,
-        scrollTrigger: {
-          trigger: '.about-cards-col',
-          start: 'top 85%',
-          toggleActions: 'play none none none',
-        },
-      })
+      gsap.fromTo('.about-card',
+        { y: 40, opacity: 0 },
+        {
+          y: 0, opacity: 1,
+          duration: 0.7,
+          stagger: 0.15,
+          ease: ANIM.ease.luxe,
+          scrollTrigger: {
+            trigger: '.about-cards-col',
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        }
+      )
     })
 
     // Heading animation
-    gsap.from('.about-heading > *', {
-      y: 50, opacity: 0,
-      duration: ANIM.duration.slow,
-      stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.about-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
-    })
+    gsap.fromTo('.about-heading > *',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: ANIM.duration.slow,
+        stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.about-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
 
     // Checklist stagger
-    gsap.from('.about-check', {
-      x: -20, opacity: 0,
-      duration: ANIM.duration.normal,
-      stagger: ANIM.stagger.cascade,
-      ease: ANIM.ease.smooth,
-      scrollTrigger: { trigger: '.about-checks', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
-    })
+    gsap.fromTo('.about-check',
+      { x: -20, opacity: 0 },
+      {
+        x: 0, opacity: 1,
+        duration: ANIM.duration.normal,
+        stagger: ANIM.stagger.cascade,
+        ease: ANIM.ease.smooth,
+        scrollTrigger: { trigger: '.about-checks', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
 
   }, { scope: sectionRef })
 

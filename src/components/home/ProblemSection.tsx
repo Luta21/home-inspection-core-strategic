@@ -2,26 +2,22 @@
 
 import { useRef } from 'react'
 import Image from 'next/image'
-import { AlertTriangle, Eye, TrendingDown } from 'lucide-react'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
 import { IMAGES } from '@/lib/images'
 
 const PROBLEMS = [
   {
-    icon: AlertTriangle,
     stat: '73%',
     title: 'Defecte Ascunse',
     desc: 'din apartamentele din București au cel puțin un defect ascuns care nu poate fi identificat fără echipamente profesionale de inspecție tehnică.',
   },
   {
-    icon: Eye,
     title: 'Probleme Structurale Invizibile',
     stat: '45%',
     desc: 'din problemele structurale — fisuri în armături, defecte de betonare, punți termice — rămân nedetectate fără scanare termografică și verificare cu sclerometru.',
   },
   {
-    icon: TrendingDown,
     stat: '€15.000+',
     title: 'Costuri Neprevăzute',
     desc: 'este costul mediu al reparațiilor neprevăzute descoperite după achiziție. O inspecție tehnică de 350-800 EUR te poate proteja de pierderi majore.',
@@ -35,29 +31,41 @@ export function ProblemSection() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) return
 
-    gsap.from('.problem-heading > *', {
-      y: 60, opacity: 0, duration: ANIM.duration.slow, stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.problem-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.problem-heading > *',
+      { y: 60, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: ANIM.duration.slow, stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.problem-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
 
-    gsap.from('.problem-card', {
-      y: 80, opacity: 0, duration: ANIM.duration.slow, stagger: ANIM.stagger.relaxed,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.problem-cards', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.problem-card',
+      { y: 40, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: ANIM.duration.normal, stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.problem-cards', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
 
     // Image clip-path reveal
-    gsap.from('.problem-image', {
-      clipPath: 'inset(0 100% 0 0)', duration: ANIM.duration.luxe, ease: ANIM.ease.sharp,
-      scrollTrigger: { trigger: '.problem-image', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
-    })
+    gsap.fromTo('.problem-image',
+      { clipPath: 'inset(0 100% 0 0)' },
+      {
+        clipPath: 'inset(0 0% 0 0)', duration: ANIM.duration.luxe, ease: ANIM.ease.sharp,
+        scrollTrigger: { trigger: '.problem-image', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
 
-    // Parallax on image
-    gsap.to('.problem-image-inner', {
-      y: 60, ease: 'none',
-      scrollTrigger: { trigger: '.problem-image', start: 'top bottom', end: 'bottom top', scrub: 1.5 },
-    })
+    // Parallax on image — starts at natural position, moves down gently
+    gsap.fromTo('.problem-image-inner',
+      { y: 0 },
+      {
+        y: 40, ease: 'none',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top center', end: 'bottom top', scrub: 1.5 },
+      }
+    )
 
   }, { scope: sectionRef })
 
@@ -80,29 +88,25 @@ export function ProblemSection() {
           <div className="mt-6 h-[2px] w-16 bg-gold" />
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="problem-cards flex flex-col gap-6">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-stretch lg:gap-16">
+          <div className="problem-cards flex flex-col gap-8">
             {PROBLEMS.map((problem, i) => (
               <div
                 key={i}
-                className="problem-card group flex gap-5 rounded-xl border border-grey-500/20 bg-black-elevated p-6transition-all duration-400 hover:border-gold/30 hover:shadow-[0_4px_20px_rgba(201,168,76,0.08)]"
+                className="problem-card group py-6"
+                style={{ borderBottom: i < PROBLEMS.length - 1 ? '1px solid rgba(201,168,76,0.08)' : 'none' }}
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gold/10">
-                  <problem.icon className="h-5 w-5 text-gold" />
-                </div>
-                <div>
-                  <span className="mb-1 block font-[var(--font-jetbrains)] text-2xl font-bold text-gold">
-                    {problem.stat}
-                  </span>
-                  <h3 className="mb-1 text-sm font-semibold text-white">{problem.title}</h3>
-                  <p className="text-sm leading-relaxed text-grey-300">{problem.desc}</p>
-                </div>
+                <span className="mb-2 block font-[var(--font-playfair)] text-[clamp(2rem,4vw,3rem)] font-bold text-gold-gradient leading-none">
+                  {problem.stat}
+                </span>
+                <h3 className="mb-2 font-[var(--font-playfair)] text-lg font-semibold text-gold-light">{problem.title}</h3>
+                <p className="max-w-md text-sm leading-[1.8] text-grey-300/80">{problem.desc}</p>
               </div>
             ))}
           </div>
 
-          <div className="problem-image relative overflow-hidden rounded-xl" style={{ clipPath: 'inset(0 0 0 0)' }}>
-            <div className="problem-image-inner relative aspect-[4/3] lg:aspect-auto lg:h-full">
+          <div className="problem-image relative overflow-hidden rounded-xl lg:min-h-[500px]" style={{ clipPath: 'inset(0 0 0 0)' }}>
+            <div className="problem-image-inner relative aspect-[3/4] sm:aspect-[4/3] lg:absolute lg:inset-0">
               <Image
                 src={IMAGES.thermalScan}
                 alt="Scanare termografică apartament București — detectare punți termice și infiltrații cu camera profesională Flir E60"

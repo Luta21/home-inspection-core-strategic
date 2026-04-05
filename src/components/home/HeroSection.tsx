@@ -57,13 +57,13 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 lg:px-8">
         <div className="max-w-3xl">
-          {/* Gold accent line */}
+          {/* Gold accent line — slow elegant draw */}
           <div
             className="mb-8 h-[2px] w-16 bg-gold"
             style={{
               transform: loaded ? 'scaleX(1)' : 'scaleX(0)',
               transformOrigin: 'left',
-              transition: 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s',
+              transition: 'transform 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s',
             }}
           />
 
@@ -72,14 +72,14 @@ export function HeroSection() {
             className="mb-5 font-[var(--font-inter)] text-[11px] font-semibold uppercase tracking-[0.25em] text-gold"
             style={{
               opacity: loaded ? 1 : 0,
-              transform: loaded ? 'translateY(0)' : 'translateY(15px)',
-              transition: 'opacity 0.7s ease 0.3s, transform 0.7s ease 0.3s',
+              transform: loaded ? 'translateY(0)' : 'translateY(20px)',
+              transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s',
             }}
           >
             Inspecție Tehnică Imobiliară — București & Ilfov
           </h1>
 
-          {/* Visual headline — each word staggers in */}
+          {/* Visual headline — each word staggers in slowly */}
           <h2 className="mb-6 font-[var(--font-playfair)] text-[clamp(2.5rem,5.5vw,5rem)] font-bold leading-[1.05] tracking-tight">
             {['Verifică', 'Înainte', 'Să'].map((word, i) => (
               <span key={word}>
@@ -87,8 +87,8 @@ export function HeroSection() {
                   className="inline-block text-white"
                   style={{
                     opacity: loaded ? 1 : 0,
-                    transform: loaded ? 'translateY(0)' : 'translateY(50px)',
-                    transition: `opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${0.4 + i * 0.08}s, transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${0.4 + i * 0.08}s`,
+                    transform: loaded ? 'translateY(0)' : 'translateY(60px)',
+                    transition: `opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) ${0.7 + i * 0.15}s, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1) ${0.7 + i * 0.15}s`,
                   }}
                 >
                   {word}
@@ -100,8 +100,8 @@ export function HeroSection() {
               className="inline-block text-gold-gradient"
               style={{
                 opacity: loaded ? 1 : 0,
-                transform: loaded ? 'translateY(0)' : 'translateY(50px)',
-                transition: 'opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s, transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s',
+                transform: loaded ? 'translateY(0)' : 'translateY(60px)',
+                transition: 'opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1) 1.2s, transform 1.6s cubic-bezier(0.16, 1, 0.3, 1) 1.2s',
               }}
             >
               Investești.
@@ -113,8 +113,8 @@ export function HeroSection() {
             className="mb-10 max-w-xl font-[var(--font-inter)] text-lg leading-relaxed text-grey-200"
             style={{
               opacity: loaded ? 1 : 0,
-              transform: loaded ? 'translateY(0)' : 'translateY(25px)',
-              transition: 'opacity 0.8s ease 0.8s, transform 0.8s ease 0.8s',
+              transform: loaded ? 'translateY(0)' : 'translateY(30px)',
+              transition: 'opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) 1.6s, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1) 1.6s',
             }}
           >
             Inspecție tehnică imobiliară profesională cu echipamente Flir de ultimă generație.
@@ -131,7 +131,7 @@ export function HeroSection() {
                 background: 'linear-gradient(135deg, #E8D5A3, #C9A84C, #B8860B)',
                 opacity: loaded ? 1 : 0,
                 transform: loaded ? 'translateY(0)' : 'translateY(30px)',
-                transition: 'opacity 0.7s ease 1s, transform 0.7s ease 1s, box-shadow 0.3s ease',
+                transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 2s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 2s, box-shadow 0.3s ease',
               }}
             >
               Programează Inspecția
@@ -143,7 +143,7 @@ export function HeroSection() {
               style={{
                 opacity: loaded ? 1 : 0,
                 transform: loaded ? 'translateY(0)' : 'translateY(30px)',
-                transition: 'opacity 0.7s ease 1.1s, transform 0.7s ease 1.1s, border-color 0.3s ease, background-color 0.3s ease',
+                transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 2.2s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 2.2s, border-color 0.3s ease, background-color 0.3s ease',
               }}
             >
               Vezi Raport Exemplu
@@ -162,7 +162,7 @@ export function HeroSection() {
                 style={{
                   opacity: loaded ? 1 : 0,
                   transform: loaded ? 'translateY(0)' : 'translateY(15px)',
-                  transition: `opacity 0.6s ease ${1.2 + i * 0.1}s, transform 0.6s ease ${1.2 + i * 0.1}s`,
+                  transition: `opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) ${2.6 + i * 0.15}s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) ${2.6 + i * 0.15}s`,
                 }}
               >
                 <span className="block font-[var(--font-jetbrains)] text-2xl font-bold text-gold lg:text-3xl">
@@ -182,8 +182,8 @@ export function HeroSection() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         style={{
           opacity: loaded ? 1 : 0,
-          transition: 'opacity 1s ease 1.5s',
-          animation: loaded ? 'hero-bounce 2s ease-in-out 2s infinite' : 'none',
+          transition: 'opacity 1.5s ease 3.2s',
+          animation: loaded ? 'hero-bounce 3s ease-in-out 4s infinite' : 'none',
         }}
       >
         <div className="flex flex-col items-center gap-2">

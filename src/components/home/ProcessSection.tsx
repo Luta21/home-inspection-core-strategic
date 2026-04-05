@@ -32,13 +32,16 @@ export function ProcessSection() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) return
 
-    gsap.from('.process-heading > *', {
-      y: 50, opacity: 0,
-      duration: ANIM.duration.slow,
-      stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.process-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
-    })
+    gsap.fromTo('.process-heading > *',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: ANIM.duration.slow,
+        stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.process-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
   }, { scope: sectionRef })
 
   return (
@@ -76,7 +79,7 @@ export function ProcessSection() {
                     style={{
                       strokeDasharray: 628,
                       strokeDashoffset: isVisible ? 0 : 628,
-                      transition: `stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.5}s`,
+                      transition: `stroke-dashoffset 3s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.6}s`,
                     }}
                   />
                   <circle
@@ -88,7 +91,7 @@ export function ProcessSection() {
                     style={{
                       strokeDasharray: 534,
                       strokeDashoffset: isVisible ? 0 : 534,
-                      transition: `stroke-dashoffset 1.8s cubic-bezier(0.4, 0, 0.2, 1) ${i * 0.5 + 0.4}s`,
+                      transition: `stroke-dashoffset 2.5s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.6 + 0.6}s`,
                     }}
                   />
                 </svg>
@@ -97,7 +100,7 @@ export function ProcessSection() {
                   style={{
                     opacity: isVisible ? 1 : 0,
                     transform: isVisible ? 'scale(1)' : 'scale(0.85)',
-                    transition: `opacity 0.8s ease ${i * 0.5 + 0.6}s, transform 0.8s ease ${i * 0.5 + 0.6}s`,
+                    transition: `opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.6 + 1}s, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.6 + 1}s`,
                   }}
                 >
                   <span className="mb-1 font-[var(--font-jetbrains)] text-[10px] tracking-[0.2em] text-gold/50">

@@ -41,17 +41,23 @@ export function PortfolioSection() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) return
 
-    gsap.from('.portfolio-heading > *', {
-      y: 50, opacity: 0, duration: ANIM.duration.slow, stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.portfolio-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.portfolio-heading > *',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: ANIM.duration.slow, stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.portfolio-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
 
-    gsap.from('.portfolio-card', {
-      y: 80, opacity: 0, duration: ANIM.duration.slow, stagger: ANIM.stagger.relaxed,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.portfolio-grid', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.portfolio-card',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: ANIM.duration.normal, stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.portfolio-grid', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
   }, { scope: sectionRef })
 
   return (

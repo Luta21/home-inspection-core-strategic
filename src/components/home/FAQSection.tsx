@@ -16,8 +16,8 @@ function FAQItem({ question, answer, isOpen, onClick }: {
     gsap.to(contentRef.current, {
       height: isOpen ? 'auto' : 0,
       opacity: isOpen ? 1 : 0,
-      duration: 0.4,
-      ease: 'power2.inOut',
+      duration: 0.7,
+      ease: 'expo.out',
     })
   }, { dependencies: [isOpen] })
 
@@ -48,20 +48,26 @@ export function FAQSection() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) return
 
-    gsap.from('.faq-heading > *', {
-      y: 50, opacity: 0,
-      duration: ANIM.duration.slow,
-      stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.faq-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.faq-heading > *',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: ANIM.duration.slow,
+        stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.faq-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
 
-    gsap.from('.faq-list', {
-      y: 40, opacity: 0,
-      duration: ANIM.duration.slow,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.faq-list', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.faq-list',
+      { y: 40, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: ANIM.duration.slow,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.faq-list', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
   }, { scope: sectionRef })
 
   // FAQPage schema

@@ -16,26 +16,31 @@ export function ServicesSection() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) return
 
-    gsap.from('.services-heading > *', {
-      y: 50, opacity: 0,
-      duration: ANIM.duration.slow,
-      stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.services-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
-    })
+    gsap.fromTo('.services-heading > *',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: ANIM.duration.slow,
+        stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.services-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
 
     const cards = cardsRef.current.filter(Boolean)
     cards.forEach((card, i) => {
       if (!card) return
 
-      gsap.from(card, {
-        y: 100 + (i % 2 === 0 ? 40 : 0),
-        opacity: 0,
-        duration: ANIM.duration.luxe,
-        delay: i * 0.12,
-        ease: ANIM.ease.luxe,
-        scrollTrigger: { trigger: '.services-grid', start: 'top 90%', toggleActions: ANIM.scroll.toggleOnce },
-      })
+      gsap.fromTo(card,
+        { y: 60 + (i % 2 === 0 ? 20 : 0), opacity: 0 },
+        {
+          y: 0, opacity: 1,
+          duration: ANIM.duration.normal,
+          delay: i * 0.1,
+          ease: ANIM.ease.luxe,
+          scrollTrigger: { trigger: '.services-grid', start: 'top 90%', toggleActions: ANIM.scroll.toggleOnce },
+        }
+      )
 
       // Parallax — odd cards float slightly faster
       gsap.to(card, {
@@ -57,13 +62,16 @@ export function ServicesSection() {
 
       const line = card.querySelector('.card-gold-line')
       if (line) {
-        gsap.from(line, {
-          scaleX: 0, transformOrigin: 'left center',
-          duration: 0.8,
-          delay: i * 0.12 + 0.3,
-          ease: ANIM.ease.sharp,
-          scrollTrigger: { trigger: card, start: ANIM.scroll.startLate, toggleActions: ANIM.scroll.toggleOnce },
-        })
+        gsap.fromTo(line,
+          { scaleX: 0, transformOrigin: 'left center' },
+          {
+            scaleX: 1, transformOrigin: 'left center',
+            duration: 0.8,
+            delay: i * 0.12 + 0.3,
+            ease: ANIM.ease.sharp,
+            scrollTrigger: { trigger: card, start: ANIM.scroll.startLate, toggleActions: ANIM.scroll.toggleOnce },
+          }
+        )
       }
     })
   }, { scope: sectionRef })

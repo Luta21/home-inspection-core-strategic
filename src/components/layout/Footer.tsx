@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from 'react'
+import Image from 'next/image'
 import { Phone, Mail, MapPin } from 'lucide-react'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
@@ -32,13 +33,16 @@ export function Footer() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) return
 
-    gsap.from('.footer-col', {
-      y: 30, opacity: 0,
-      duration: ANIM.duration.normal,
-      stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.smooth,
-      scrollTrigger: { trigger: footerRef.current, start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
-    })
+    gsap.fromTo('.footer-col',
+      { y: 30, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: ANIM.duration.normal,
+        stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.smooth,
+        scrollTrigger: { trigger: footerRef.current, start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
   }, { scope: footerRef })
 
   return (
@@ -47,14 +51,14 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="footer-col">
-            <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded border border-gold/30">
-                <div className="h-4 w-4 rotate-45 border-2 border-gold" />
-              </div>
-              <div>
-                <span className="block font-[var(--font-playfair)] text-sm font-bold text-white">CORE STRATEGIC</span>
-                <span className="block text-[9px] tracking-[0.25em] text-gold">CONSULTING</span>
-              </div>
+            <div className="relative mb-4 h-10 w-[160px]">
+              <Image
+                src="/images/logo.jpeg"
+                alt="Core Strategic Consulting"
+                fill
+                className="object-contain object-left"
+                sizes="160px"
+              />
             </div>
             <p className="mb-6 text-sm leading-relaxed text-grey-400">
               Inspecție tehnică imobiliară profesională în București și Ilfov.

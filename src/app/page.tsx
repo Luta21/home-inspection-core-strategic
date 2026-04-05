@@ -15,7 +15,7 @@ import { CTASection } from '@/components/home/CTASection'
 import { Footer } from '@/components/layout/Footer'
 import { SmoothScrollProvider } from '@/components/effects/SmoothScroll'
 import { CTABanner } from '@/components/ui/CTABanner'
-import { MobileStickyBar } from '@/components/ui/MobileStickyBar'
+import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 
 export default function HomePage() {
   return (
@@ -39,6 +39,7 @@ export default function HomePage() {
         />
 
         <ServicesSection />
+        <TestimonialsSection />
         <ProcessSection />
         <AboutSection />
 
@@ -58,12 +59,11 @@ export default function HomePage() {
         />
 
         <PortfolioSection />
-        <TestimonialsSection />
         <FAQSection />
         <CTASection />
       </main>
       <Footer />
-      <MobileStickyBar />
+      <WhatsAppButton />
     </SmoothScrollProvider>
   )
 }

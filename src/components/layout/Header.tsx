@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useState } from 'react'
+import Image from 'next/image'
 import { Menu, X, Phone } from 'lucide-react'
 import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap'
 import { SITE } from '@/lib/constants'
@@ -55,18 +56,15 @@ export function Header() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded border border-gold/30">
-              <div className="h-5 w-5 rotate-45 border-2 border-gold" />
-            </div>
-            <div>
-              <span className="block font-[var(--font-playfair)] text-sm font-bold tracking-wide text-white">
-                CORE STRATEGIC
-              </span>
-              <span className="block text-[10px] tracking-[0.25em] text-gold">
-                CONSULTING
-              </span>
-            </div>
+          <a href="#" className="relative block h-10 w-[160px]">
+            <Image
+              src="/images/logo.jpeg"
+              alt="Core Strategic Consulting"
+              fill
+              className="object-contain object-left"
+              sizes="160px"
+              priority
+            />
           </a>
 
           {/* Desktop Nav */}

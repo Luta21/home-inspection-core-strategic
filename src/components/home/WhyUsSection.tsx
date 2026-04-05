@@ -42,11 +42,14 @@ export function WhyUsSection() {
       return
     }
 
-    gsap.from('.whyus-heading > *', {
-      y: 50, opacity: 0, duration: ANIM.duration.slow, stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.whyus-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
-    })
+    gsap.fromTo('.whyus-heading > *',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: ANIM.duration.slow, stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.whyus-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
 
     // Animated counters
     STATS.forEach((stat, i) => {
@@ -107,7 +110,7 @@ export function WhyUsSection() {
                 style={{
                   opacity: isVisible ? 1 : 0,
                   transform: isVisible ? 'translateY(0)' : 'translateY(50px)',
-                  transition: `opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${i * 0.15}s, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${i * 0.15}s`,
+                  transition: `opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.25}s, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.25}s`,
                 }}
               >
                 {/* Background icon watermark */}
@@ -121,7 +124,7 @@ export function WhyUsSection() {
                   style={{
                     background: 'linear-gradient(90deg, transparent 0%, #C9A84C 50%, transparent 100%)',
                     transform: isVisible ? 'scaleX(1)' : 'scaleX(0)',
-                    transition: `transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${i * 0.15 + 0.4}s`,
+                    transition: `transform 1.6s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.25 + 0.5}s`,
                   }}
                 />
 
@@ -133,7 +136,7 @@ export function WhyUsSection() {
                     style={{
                       opacity: isVisible ? 1 : 0,
                       transform: isVisible ? 'scale(1)' : 'scale(0.5)',
-                      transition: `opacity 0.6s ease ${i * 0.15 + 0.3}s, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ${i * 0.15 + 0.3}s`,
+                      transition: `opacity 1s ease ${i * 0.25 + 0.4}s, transform 1s cubic-bezier(0.34, 1.56, 0.64, 1) ${i * 0.25 + 0.4}s`,
                     }}
                   >
                     <Icon className="h-5 w-5 text-gold/70" strokeWidth={1.5} />
@@ -156,7 +159,7 @@ export function WhyUsSection() {
                     style={{
                       background: 'linear-gradient(90deg, transparent, #C9A84C, transparent)',
                       opacity: isVisible ? 0.4 : 0,
-                      transition: `opacity 0.8s ease ${i * 0.15 + 0.6}s`,
+                      transition: `opacity 1.2s ease ${i * 0.25 + 0.8}s`,
                     }}
                   />
 

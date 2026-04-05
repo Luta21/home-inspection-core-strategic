@@ -40,31 +40,43 @@ export function ReportSection() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) return
 
-    gsap.from('.report-heading > *', {
-      y: 50, opacity: 0, duration: ANIM.duration.slow, stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.report-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.report-heading > *',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: ANIM.duration.slow, stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.report-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
 
     // Report mockup image reveal
-    gsap.from('.report-mockup', {
-      y: 80, opacity: 0, duration: ANIM.duration.luxe, ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.report-mockup', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
-    })
+    gsap.fromTo('.report-mockup',
+      { y: 80, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: ANIM.duration.luxe, ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.report-mockup', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
 
     // Features list stagger
-    gsap.from('.report-feature', {
-      x: -20, opacity: 0, duration: ANIM.duration.normal, stagger: ANIM.stagger.tight,
-      ease: ANIM.ease.smooth,
-      scrollTrigger: { trigger: '.report-features', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.report-feature',
+      { x: -20, opacity: 0 },
+      {
+        x: 0, opacity: 1, duration: ANIM.duration.normal, stagger: ANIM.stagger.tight,
+        ease: ANIM.ease.smooth,
+        scrollTrigger: { trigger: '.report-features', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
 
     // Sections grid stagger
-    gsap.from('.report-section-card', {
-      y: 40, opacity: 0, duration: ANIM.duration.normal, stagger: ANIM.stagger.cascade,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.report-sections-grid', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.report-section-card',
+      { y: 30, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: ANIM.duration.fast, stagger: ANIM.stagger.tight,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.report-sections-grid', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
 
     // Parallax on bg decorative element
     gsap.to('.report-bg-accent', {

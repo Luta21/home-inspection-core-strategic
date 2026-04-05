@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState, useEffect } from 'react'
+import { useRef } from 'react'
 import { Check, ArrowRight, Star, Crown, Gem, Shield } from 'lucide-react'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
@@ -11,38 +11,86 @@ const PACKAGE_ICONS = [Shield, Crown, Gem]
 export function PricingSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const cardsRef = useRef<(HTMLDivElement | null)[]>([])
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    const section = sectionRef.current
-    if (!section) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.2 }
-    )
-    observer.observe(section)
-    return () => observer.disconnect()
-  }, [])
 
   useGSAP(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReducedMotion) return
+    if (prefersReducedMotion) {
+      // Show everything immediately
+      cardsRef.current.forEach((card) => {
+        if (card) gsap.set(card, { opacity: 1, x: 0, scale: 1 })
+      })
+      return
+    }
 
-    gsap.from('.pricing-heading > *', {
-      y: 50, opacity: 0,
-      duration: ANIM.duration.slow,
-      stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.pricing-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
-    })
+    gsap.fromTo('.pricing-heading > *',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: ANIM.duration.slow,
+        stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.pricing-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
 
-    // Parallax — cards at slightly different speeds
-    cardsRef.current.forEach((card, i) => {
+    const cards = cardsRef.current
+    const leftCard = cards[0]
+    const centerCard = cards[1]
+    const rightCard = cards[2]
+
+    // Center card: fade in + subtle scale
+    if (centerCard) {
+      gsap.fromTo(centerCard,
+        { opacity: 0, scale: 0.95 },
+        {
+          opacity: 1, scale: 1,
+          duration: ANIM.duration.normal,
+          ease: ANIM.ease.luxe,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            toggleActions: ANIM.scroll.toggleOnce,
+          },
+        }
+      )
+    }
+
+    // Left card: slide in from the left
+    if (leftCard) {
+      gsap.fromTo(leftCard,
+        { opacity: 0, x: -80 },
+        {
+          opacity: 1, x: 0,
+          duration: ANIM.duration.normal,
+          ease: ANIM.ease.luxe,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            toggleActions: ANIM.scroll.toggleOnce,
+          },
+        }
+      )
+    }
+
+    // Right card: slide in from the right
+    if (rightCard) {
+      gsap.fromTo(rightCard,
+        { opacity: 0, x: 80 },
+        {
+          opacity: 1, x: 0,
+          duration: ANIM.duration.normal,
+          ease: ANIM.ease.luxe,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            toggleActions: ANIM.scroll.toggleOnce,
+          },
+        }
+      )
+    }
+
+    // Subtle parallax on scroll after reveal
+    cards.forEach((card, i) => {
       if (!card) return
       gsap.to(card, {
         y: i === 1 ? -25 : -10,
@@ -95,19 +143,12 @@ export function PricingSection() {
               <div
                 key={pkg.name}
                 ref={(el) => { cardsRef.current[i] = el }}
-                className={`group relative overflow-hidden rounded-2xl transition-all duration-700 ${
+                className={`group relative overflow-hidden rounded-2xl opacity-0 transition-shadow duration-700 ${
                   pkg.highlighted
                     ? 'border border-gold/20 lg:scale-[1.03]'
                     : 'border border-transparent'
                 }`}
-                style={{
-                  perspective: '800px',
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible
-                    ? `translateY(0) ${pkg.highlighted ? 'scale(1.03)' : 'scale(1)'}`
-                    : `translateY(60px) ${pkg.highlighted ? 'scale(1.03)' : 'scale(1)'}`,
-                  transition: `opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${i * 0.2}s, transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${i * 0.2}s`,
-                }}
+                style={{ perspective: '800px' }}
                 onMouseMove={(e) => handleMouseMove(e, i)}
                 onMouseLeave={() => handleMouseLeave(i)}
               >
@@ -132,14 +173,7 @@ export function PricingSection() {
 
                 {/* Recommended badge */}
                 {pkg.highlighted && (
-                  <div
-                    className="absolute -top-px left-1/2 -translate-x-1/2"
-                    style={{
-                      opacity: isVisible ? 1 : 0,
-                      transform: isVisible ? 'translateX(-50%) translateY(0)' : 'translateX(-50%) translateY(-10px)',
-                      transition: `opacity 0.6s ease ${i * 0.2 + 0.5}s, transform 0.6s ease ${i * 0.2 + 0.5}s`,
-                    }}
-                  >
+                  <div className="absolute -top-px left-1/2 -translate-x-1/2">
                     <div className="flex items-center gap-1.5 rounded-b-lg px-5 py-2 text-[10px] font-bold uppercase tracking-[0.15em] text-black-rich" style={{ background: 'linear-gradient(135deg, #E8D5A3, #C9A84C)' }}>
                       <Star className="h-3 w-3" fill="currentColor" />
                       Recomandat
@@ -155,11 +189,6 @@ export function PricingSection() {
                       className={`flex h-11 w-11 items-center justify-center rounded-xl ${
                         pkg.highlighted ? 'border border-gold/30 bg-gold/10' : 'border border-grey-500/20 bg-grey-500/5'
                       }`}
-                      style={{
-                        opacity: isVisible ? 1 : 0,
-                        transform: isVisible ? 'scale(1)' : 'scale(0.5)',
-                        transition: `opacity 0.5s ease ${i * 0.2 + 0.3}s, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) ${i * 0.2 + 0.3}s`,
-                      }}
                     >
                       <Icon className={`h-5 w-5 ${pkg.highlighted ? 'text-gold' : 'text-grey-300'}`} strokeWidth={1.5} />
                     </div>
@@ -171,14 +200,7 @@ export function PricingSection() {
 
                   {/* Price — big, bold, no background */}
                   <div className="mb-8">
-                    <div
-                      className="flex items-baseline gap-2"
-                      style={{
-                        opacity: isVisible ? 1 : 0,
-                        transform: isVisible ? 'translateY(0)' : 'translateY(25px)',
-                        transition: `opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${i * 0.2 + 0.35}s, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${i * 0.2 + 0.35}s`,
-                      }}
-                    >
+                    <div className="flex items-baseline gap-2">
                       <span className="text-sm text-grey-400">de la</span>
                       <span className={`font-[var(--font-playfair)] text-7xl font-bold leading-none tracking-tight lg:text-8xl ${pkg.highlighted ? 'text-gold' : 'text-white'}`}>
                         {pkg.price}
@@ -192,24 +214,16 @@ export function PricingSection() {
                         background: pkg.highlighted
                           ? 'linear-gradient(90deg, #C9A84C, transparent)'
                           : 'linear-gradient(90deg, rgba(68,68,68,0.5), transparent)',
-                        transform: isVisible ? 'scaleX(1)' : 'scaleX(0)',
-                        transformOrigin: 'left',
-                        transition: `transform 0.8s ease ${i * 0.2 + 0.6}s`,
                       }}
                     />
                   </div>
 
                   {/* Features */}
                   <ul className="mb-10 space-y-4">
-                    {pkg.features.map((feature, fi) => (
+                    {pkg.features.map((feature) => (
                       <li
                         key={feature}
                         className="flex items-start gap-3"
-                        style={{
-                          opacity: isVisible ? 1 : 0,
-                          transform: isVisible ? 'translateX(0)' : 'translateX(-15px)',
-                          transition: `opacity 0.5s ease ${i * 0.2 + 0.5 + fi * 0.06}s, transform 0.5s ease ${i * 0.2 + 0.5 + fi * 0.06}s`,
-                        }}
                       >
                         <div className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full ${
                           pkg.highlighted ? 'bg-gold/15' : 'bg-grey-500/10'

@@ -86,7 +86,7 @@ export function CTABanner({ variant = 'gold', headline, subtext }: CTABannerProp
             style={{
               opacity: isVisible ? 1 : 0,
               transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-              transition: 'opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s',
+              transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s',
             }}
           >
             <h3 className="font-[var(--font-playfair)] text-xl font-bold text-white lg:text-2xl">{headline}</h3>
@@ -97,7 +97,7 @@ export function CTABanner({ variant = 'gold', headline, subtext }: CTABannerProp
             style={{
               opacity: isVisible ? 1 : 0,
               transform: isVisible ? 'translateX(0)' : 'translateX(20px)',
-              transition: 'opacity 0.7s ease 0.4s, transform 0.7s ease 0.4s',
+              transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s',
             }}
           >
             <a
@@ -137,7 +137,7 @@ export function CTABanner({ variant = 'gold', headline, subtext }: CTABannerProp
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateY(0)' : 'translateY(15px)',
-            transition: 'opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s',
+            transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s',
           }}
         >
           <span className="font-semibold text-gold">{headline}</span>{' '}
@@ -149,7 +149,7 @@ export function CTABanner({ variant = 'gold', headline, subtext }: CTABannerProp
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? 'translateX(0)' : 'translateX(15px)',
-            transition: 'opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s, gap 0.3s ease',
+            transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s, gap 0.3s ease',
           }}
         >
           Solicită Consultanță Gratuită <ArrowRight className="h-4 w-4" />

@@ -15,20 +15,26 @@ export function CTASection() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     if (prefersReducedMotion) return
 
-    gsap.from('.cta-content > *', {
-      y: 50, opacity: 0,
-      duration: ANIM.duration.slow,
-      stagger: ANIM.stagger.normal,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.cta-content', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.cta-content > *',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: ANIM.duration.slow,
+        stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.cta-content', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
 
-    gsap.from('.cta-form', {
-      y: 50, opacity: 0,
-      duration: ANIM.duration.slow,
-      ease: ANIM.ease.luxe,
-      scrollTrigger: { trigger: '.cta-form', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
-    })
+    gsap.fromTo('.cta-form',
+      { y: 50, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: ANIM.duration.slow,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.cta-form', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleActions },
+      }
+    )
 
     // Parallax bg
     gsap.to('.cta-bg', {

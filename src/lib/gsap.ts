@@ -6,26 +6,39 @@ import { useGSAP } from '@gsap/react'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, useGSAP)
-
-  // Global fix: prevent from() with ScrollTrigger from hiding elements
-  // before the trigger fires. Elements stay visible until scrolled into view,
-  // then the animation plays naturally.
-  const originalFrom = gsap.from.bind(gsap)
-  gsap.from = function(targets: gsap.TweenTarget, vars: gsap.TweenVars) {
-    if (vars.scrollTrigger) {
-      vars.immediateRender = false
-    }
-    return originalFrom(targets, vars)
-  } as typeof gsap.from
 }
 
 gsap.defaults({
-  ease: 'power3.out',
-  duration: 0.8,
+  ease: 'expo.out',
+  duration: 1.4,
 })
 
 gsap.config({
   nullTargetWarn: false,
 })
+
+/**
+ * Helper: elegant scroll-triggered reveal using fromTo (no flash).
+ * Use this instead of gsap.from() for scroll animations.
+ */
+export function revealFrom(
+  targets: gsap.TweenTarget,
+  from: gsap.TweenVars,
+  scrollOpts: ScrollTrigger.Vars,
+  extra?: gsap.TweenVars,
+) {
+  return gsap.fromTo(targets,
+    { opacity: 0, ...from },
+    {
+      opacity: 1,
+      y: 0, x: 0, scale: 1, rotateX: 0, rotateY: 0, rotateZ: 0,
+      ...extra,
+      scrollTrigger: {
+        toggleActions: 'play none none none',
+        ...scrollOpts,
+      },
+    }
+  )
+}
 
 export { gsap, ScrollTrigger, useGSAP }
