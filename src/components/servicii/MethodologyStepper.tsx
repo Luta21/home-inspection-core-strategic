@@ -2,7 +2,7 @@
 "use client"
 
 import { useRef } from 'react'
-import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap'
+import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
 import type { ServicePageData } from '@/lib/services-data'
 

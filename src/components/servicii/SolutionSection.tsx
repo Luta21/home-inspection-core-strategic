@@ -58,7 +58,7 @@ export function SolutionSection({ service }: SolutionSectionProps) {
         {/* Benefits grid */}
         <div className="solution-grid grid gap-6 sm:grid-cols-2 lg:gap-8">
           {service.benefits.map((benefit) => {
-            const Icon = (LucideIcons as Record<string, LucideIcons.LucideIcon>)[benefit.icon] || LucideIcons.CircleDot
+            const Icon = (LucideIcons as unknown as Record<string, LucideIcons.LucideIcon>)[benefit.icon] || LucideIcons.CircleDot
             return (
               <div
                 key={benefit.title}

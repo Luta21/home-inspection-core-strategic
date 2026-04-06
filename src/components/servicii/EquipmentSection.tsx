@@ -58,7 +58,7 @@ export function EquipmentSection({ service }: EquipmentSectionProps) {
         {/* Horizontal scroll container */}
         <div className="equipment-scroll -mx-5 flex gap-6 overflow-x-auto px-5 pb-4 snap-x snap-mandatory scrollbar-hide lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-8 lg:overflow-visible lg:px-0 lg:pb-0">
           {service.equipment.map((tool) => {
-            const Icon = (LucideIcons as Record<string, LucideIcons.LucideIcon>)[tool.icon] || LucideIcons.CircleDot
+            const Icon = (LucideIcons as unknown as Record<string, LucideIcons.LucideIcon>)[tool.icon] || LucideIcons.CircleDot
             return (
               <div
                 key={tool.name}
