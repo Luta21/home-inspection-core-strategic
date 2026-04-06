@@ -2,7 +2,7 @@
 "use client"
 
 import { useRef } from 'react'
-import * as LucideIcons from 'lucide-react'
+import { getIcon } from '@/lib/icons'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
 import type { ServicePageData } from '@/lib/services-data'
@@ -58,7 +58,7 @@ export function SolutionSection({ service }: SolutionSectionProps) {
         {/* Benefits grid */}
         <div className="solution-grid grid gap-6 sm:grid-cols-2 lg:gap-8">
           {service.benefits.map((benefit) => {
-            const Icon = (LucideIcons as unknown as Record<string, LucideIcons.LucideIcon>)[benefit.icon] || LucideIcons.CircleDot
+            const Icon = getIcon(benefit.icon)
             return (
               <div
                 key={benefit.title}

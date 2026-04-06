@@ -2,7 +2,7 @@
 "use client"
 
 import { useRef } from 'react'
-import * as LucideIcons from 'lucide-react'
+import { getIcon } from '@/lib/icons'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
 import type { ServicePageData } from '@/lib/services-data'
@@ -58,7 +58,7 @@ export function EquipmentSection({ service }: EquipmentSectionProps) {
         {/* Horizontal scroll container */}
         <div className="equipment-scroll -mx-5 flex gap-6 overflow-x-auto px-5 pb-4 snap-x snap-mandatory scrollbar-hide lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-8 lg:overflow-visible lg:px-0 lg:pb-0">
           {service.equipment.map((tool) => {
-            const Icon = (LucideIcons as unknown as Record<string, LucideIcons.LucideIcon>)[tool.icon] || LucideIcons.CircleDot
+            const Icon = getIcon(tool.icon)
             return (
               <div
                 key={tool.name}

@@ -2,7 +2,7 @@
 
 import { useRef, useCallback } from 'react'
 import { ArrowRight } from 'lucide-react'
-import * as LucideIcons from 'lucide-react'
+import { getIcon } from '@/lib/icons'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
 import { SERVICE_PAGES } from '@/lib/services-data'
@@ -82,7 +82,7 @@ export function RelatedServices({ currentSlug }: RelatedServicesProps) {
         {/* Cards */}
         <div className="related-grid grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {related.map((service, i) => {
-            const Icon = (LucideIcons as unknown as Record<string, LucideIcons.LucideIcon>)[service.icon] || LucideIcons.CircleDot
+            const Icon = getIcon(service.icon)
             return (
               <a
                 key={service.slug}
