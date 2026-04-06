@@ -1,10 +1,12 @@
 "use client"
 
 import { useRef } from 'react'
+import Image from 'next/image'
 import { Phone, ArrowRight, ChevronDown } from 'lucide-react'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
 import { SITE } from '@/lib/constants'
+import { IMAGES } from '@/lib/images'
 import type { ServicePageData } from '@/lib/services-data'
 
 interface ServiceHeroProps {
@@ -126,6 +128,17 @@ export function ServiceHero({ service }: ServiceHeroProps) {
       ref={heroRef}
       className="grain-overlay relative flex min-h-[85vh] items-center overflow-hidden bg-black-pure"
     >
+      {/* Background image */}
+      <Image
+        src={IMAGES.services[service.slug]?.hero || IMAGES.hero}
+        alt={service.title}
+        fill
+        priority
+        quality={85}
+        sizes="100vw"
+        className="object-cover opacity-[0.15]"
+      />
+
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black-pure via-black-rich/50 to-black-pure" />
 

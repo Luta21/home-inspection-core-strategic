@@ -2,9 +2,11 @@
 "use client"
 
 import { useRef } from 'react'
+import Image from 'next/image'
 import { getIcon } from '@/lib/icons'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
+import { IMAGES } from '@/lib/images'
 import type { ServicePageData } from '@/lib/services-data'
 
 interface EquipmentSectionProps {
@@ -43,7 +45,17 @@ export function EquipmentSection({ service }: EquipmentSectionProps) {
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+      {/* Atmospheric background */}
+      <Image
+        src={IMAGES.equipmentBg}
+        alt=""
+        fill
+        quality={60}
+        sizes="100vw"
+        className="object-cover opacity-[0.06]"
+      />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
         {/* Header */}
         <div className="equipment-heading mb-12">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
