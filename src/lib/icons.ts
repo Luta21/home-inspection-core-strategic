@@ -27,6 +27,7 @@ import {
   ShieldCheck,
   Thermometer,
   ThermometerSun,
+  User,
   Wind,
   Zap,
 } from 'lucide-react'
@@ -59,6 +60,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   ShieldCheck,
   Thermometer,
   ThermometerSun,
+  User,
   Wind,
   Zap,
 }
