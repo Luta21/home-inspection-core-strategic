@@ -2,9 +2,11 @@
 "use client"
 
 import { useRef } from 'react'
+import Image from 'next/image'
 import { getIcon } from '@/lib/icons'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
+import { IMAGES } from '@/lib/images'
 import type { ServicePageData } from '@/lib/services-data'
 
 interface SolutionSectionProps {
@@ -26,6 +28,16 @@ export function SolutionSection({ service }: SolutionSectionProps) {
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,
         scrollTrigger: { trigger: '.solution-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
+
+    gsap.fromTo('.solution-image',
+      { y: 60, opacity: 0, scale: 0.97 },
+      {
+        y: 0, opacity: 1, scale: 1,
+        duration: ANIM.duration.luxe,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.solution-image', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
       }
     )
 
@@ -53,6 +65,19 @@ export function SolutionSection({ service }: SolutionSectionProps) {
             {service.title}
           </h2>
           <div className="mx-auto mt-6 h-[2px] w-16 bg-gold" />
+        </div>
+
+        {/* Service image */}
+        <div className="solution-image relative mb-16 h-64 overflow-hidden rounded-2xl shadow-xl shadow-black/40 lg:h-80">
+          <Image
+            src={IMAGES.services[service.slug]?.solution || IMAGES.hero}
+            alt={service.title}
+            fill
+            quality={80}
+            sizes="(max-width: 1280px) 100vw, 1200px"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black-soft via-transparent to-black-soft/30" />
         </div>
 
         {/* Benefits grid */}

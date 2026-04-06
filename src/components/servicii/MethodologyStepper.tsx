@@ -2,8 +2,10 @@
 "use client"
 
 import { useRef } from 'react'
+import Image from 'next/image'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { ANIM } from '@/lib/animations'
+import { IMAGES } from '@/lib/images'
 import type { ServicePageData } from '@/lib/services-data'
 
 interface MethodologyStepperProps {
@@ -37,6 +39,17 @@ export function MethodologyStepper({ service }: MethodologyStepperProps) {
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,
         scrollTrigger: { trigger: '.methodology-heading', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
+
+    // Methodology image reveal
+    gsap.fromTo('.methodology-image',
+      { y: 60, opacity: 0, scale: 0.97 },
+      {
+        y: 0, opacity: 1, scale: 1,
+        duration: ANIM.duration.luxe,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.methodology-image', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
       }
     )
 
@@ -111,6 +124,19 @@ export function MethodologyStepper({ service }: MethodologyStepperProps) {
             Cum Decurge <span className="text-gold-gradient">Procesul</span>
           </h2>
           <div className="mx-auto mt-6 h-[2px] w-16 bg-gold" />
+        </div>
+
+        {/* Methodology image */}
+        <div className="methodology-image relative mb-16 h-56 overflow-hidden rounded-2xl shadow-xl shadow-black/40 lg:h-72">
+          <Image
+            src={IMAGES.services[service.slug]?.methodology || IMAGES.hero}
+            alt={`Metodologie ${service.title}`}
+            fill
+            quality={80}
+            sizes="(max-width: 1280px) 100vw, 1200px"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black-rich via-transparent to-black-rich/30" />
         </div>
 
         {/* Desktop: Horizontal stepper */}

@@ -136,7 +136,7 @@ export function ServiceHero({ service }: ServiceHeroProps) {
         priority
         quality={85}
         sizes="100vw"
-        className="object-cover opacity-[0.15]"
+        className="object-cover opacity-[0.07]"
       />
 
       {/* Background gradient */}
