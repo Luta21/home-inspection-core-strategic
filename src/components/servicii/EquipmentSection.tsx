@@ -50,7 +50,7 @@ export function EquipmentSection({ service }: EquipmentSectionProps) {
         src={IMAGES.equipmentBg}
         alt=""
         fill
-        quality={60}
+        quality={50}
         sizes="100vw"
         className="object-cover opacity-[0.06]"
       />

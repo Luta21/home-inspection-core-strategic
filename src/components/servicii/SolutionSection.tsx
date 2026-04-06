@@ -73,7 +73,7 @@ export function SolutionSection({ service }: SolutionSectionProps) {
             src={IMAGES.services[service.slug]?.solution || IMAGES.hero}
             alt={service.title}
             fill
-            quality={80}
+            quality={75}
             sizes="(max-width: 1280px) 100vw, 1200px"
             className="object-cover"
           />

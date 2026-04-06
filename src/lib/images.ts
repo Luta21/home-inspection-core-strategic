@@ -3,7 +3,7 @@ export const IMAGES = {
   hero: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=85',
   thermalScan: 'https://images.unsplash.com/photo-1597484661973-ee6cd0b6482c?w=800&q=80&fit=crop&crop=center&h=1100',
   aboutTeam: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80',
-  equipmentBg: 'https://images.unsplash.com/photo-1581094794329-c8112c4e5190?w=1920&q=80',
+  equipmentBg: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?w=1920&q=80',
   portfolio1: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
   portfolio2: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
   portfolio3: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
@@ -24,25 +24,25 @@ export const IMAGES = {
     'verificare-elemente-structuri': {
       hero: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=85',
       concern: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80',
-      solution: 'https://images.unsplash.com/photo-1581094794329-c8112c4e5190?w=800&q=80',
+      solution: 'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?w=800&q=80',
       methodology: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80',
     },
     'scanare-termografica': {
-      hero: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=85',
+      hero: 'https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?w=1920&q=85',
       concern: 'https://images.unsplash.com/photo-1597484661973-ee6cd0b6482c?w=800&q=80',
       solution: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&q=80',
       methodology: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
     },
     'verificare-instalatii': {
       hero: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=85',
-      concern: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80',
+      concern: 'https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?w=800&q=80',
       solution: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=800&q=80',
       methodology: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80',
     },
     'determinare-umiditate': {
       hero: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920&q=85',
       concern: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
-      solution: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80',
+      solution: 'https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?w=800&q=80',
       methodology: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
     },
     'expertize-tehnice': {

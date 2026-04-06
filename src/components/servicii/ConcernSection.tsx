@@ -78,7 +78,7 @@ export function ConcernSection({ service }: ConcernSectionProps) {
                 src={IMAGES.services[service.slug]?.concern || IMAGES.hero}
                 alt={service.title}
                 fill
-                quality={80}
+                quality={75}
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
               />
