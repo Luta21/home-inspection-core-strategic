@@ -16,6 +16,10 @@ import { DeliverablesSection } from '@/components/servicii/DeliverablesSection'
 import { RelatedServices } from '@/components/servicii/RelatedServices'
 import { ServiceFAQ } from '@/components/servicii/ServiceFAQ'
 import { ServiceCTA } from '@/components/servicii/ServiceCTA'
+import { WhoNeedsThisSection } from '@/components/servicii/WhoNeedsThisSection'
+import { RiskAvoidanceSection } from '@/components/servicii/RiskAvoidanceSection'
+import { ServiceReportPreview } from '@/components/servicii/ServiceReportPreview'
+import { WhyCoreStrategic } from '@/components/servicii/WhyCoreStrategic'
 
 export function generateStaticParams() {
   return SERVICE_SLUGS.map((slug) => ({ slug }))
@@ -110,13 +114,17 @@ export default async function ServicePage({
       <main id="main-content">
         <ServiceHero service={service} />
         <ConcernSection service={service} />
+        <WhoNeedsThisSection service={service} />
+        <RiskAvoidanceSection service={service} />
         <SolutionSection service={service} />
         <MethodologyStepper service={service} />
         <EquipmentSection service={service} />
+        <ServiceReportPreview service={service} />
         <DeliverablesSection service={service} />
 
         <CTABanner headline={service.ctaHeadline} subtext={service.ctaSubtext} />
 
+        <WhyCoreStrategic />
         <RelatedServices currentSlug={service.slug} />
         <ServiceFAQ service={service} />
         <ServiceCTA headline={service.closingHeadline} />
