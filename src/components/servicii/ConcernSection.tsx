@@ -1,0 +1,81 @@
+"use client"
+
+import { useRef } from 'react'
+import { gsap, useGSAP } from '@/lib/gsap'
+import { ANIM } from '@/lib/animations'
+import type { ServicePageData } from '@/lib/services-data'
+
+interface ConcernSectionProps {
+  service: ServicePageData
+}
+
+export function ConcernSection({ service }: ConcernSectionProps) {
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useGSAP(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReducedMotion) return
+
+    gsap.fromTo('.concern-text > *',
+      { y: 40, opacity: 0 },
+      {
+        y: 0, opacity: 1,
+        duration: ANIM.duration.slow,
+        stagger: ANIM.stagger.normal,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.concern-text', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
+
+    gsap.fromTo('.concern-stats > *',
+      { x: 40, opacity: 0 },
+      {
+        x: 0, opacity: 1,
+        duration: ANIM.duration.normal,
+        stagger: ANIM.stagger.relaxed,
+        ease: ANIM.ease.luxe,
+        scrollTrigger: { trigger: '.concern-stats', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+      }
+    )
+  }, { scope: sectionRef })
+
+  return (
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
+          {/* Text — 3 columns */}
+          <div className="concern-text lg:col-span-3">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
+              De Ce Conteaza
+            </p>
+            <h2 className="mb-8 font-[var(--font-playfair)] text-[clamp(1.5rem,3vw,2.25rem)] font-bold text-white">
+              {service.concernHeading}
+            </h2>
+            {service.concernBody.map((paragraph, i) => (
+              <p key={i} className="mb-4 text-base leading-relaxed text-grey-300 last:mb-0">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+
+          {/* Stats — 2 columns */}
+          <div className="concern-stats flex flex-col gap-6 lg:col-span-2">
+            {service.concernStats.map((stat) => (
+              <div
+                key={stat.label}
+                className="rounded-xl border border-grey-500/15 bg-black-elevated p-6 transition-colors hover:border-gold/20"
+              >
+                <span className="block font-[var(--font-jetbrains)] text-3xl font-bold text-gold">
+                  {stat.value}
+                </span>
+                <span className="mt-2 block text-sm text-grey-300">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
