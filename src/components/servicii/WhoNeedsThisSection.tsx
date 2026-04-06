@@ -18,9 +18,9 @@ export function WhoNeedsThisSection({ service }: WhoNeedsThisSectionProps) {
     if (prefersReducedMotion) return
 
     gsap.fromTo('.who-heading > *',
-      { y: 50, opacity: 0 },
+      { y: 50, opacity: 0, filter: 'blur(6px)' },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, filter: 'blur(0px)',
         duration: ANIM.duration.slow,
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,
@@ -29,9 +29,9 @@ export function WhoNeedsThisSection({ service }: WhoNeedsThisSectionProps) {
     )
 
     gsap.fromTo('.who-card',
-      { y: 60, opacity: 0 },
+      { y: 40, opacity: 0, scale: 0.95 },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, scale: 1,
         duration: ANIM.duration.normal,
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,
@@ -60,9 +60,9 @@ export function WhoNeedsThisSection({ service }: WhoNeedsThisSectionProps) {
           {service.whoNeedsThis.map((item) => (
             <div
               key={item.persona}
-              className="who-card group rounded-xl border border-grey-500/15 bg-gradient-to-b from-black-elevated to-black-soft/80 p-8 transition-all duration-500 hover:border-gold/25"
+              className="who-card group rounded-xl bg-gradient-to-b from-black-elevated to-black-soft/80 p-8 shadow-lg shadow-black/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40"
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-gold/15 bg-gold/[0.06] transition-all duration-400 group-hover:border-gold/30 group-hover:bg-gold/10">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gold/[0.06] transition-all duration-400 group-hover:bg-gold/10">
                 <User className="h-5 w-5 text-gold/80 transition-colors duration-400 group-hover:text-gold" />
               </div>
               <h3 className="mb-2 text-lg font-semibold text-white">{item.persona}</h3>

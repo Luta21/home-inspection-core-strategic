@@ -22,10 +22,10 @@ function FAQItem({ question, answer, isOpen, onClick }: {
   }, { dependencies: [isOpen] })
 
   return (
-    <div className={`border-b transition-colors ${isOpen ? 'border-gold/30' : 'border-grey-500/20'}`}>
+    <div className={`mb-3 rounded-lg transition-shadow ${isOpen ? 'shadow-lg shadow-black/35' : 'shadow-md shadow-black/25'}`}>
       <button
         onClick={onClick}
-        className="flex w-full items-center justify-between py-5 text-left transition-colors hover:text-white"
+        className="flex w-full items-center justify-between px-5 py-5 text-left transition-colors hover:text-white"
         aria-expanded={isOpen}
       >
         <span className={`pr-4 text-base font-medium transition-colors ${isOpen ? 'text-gold' : 'text-white'}`}>
@@ -34,7 +34,7 @@ function FAQItem({ question, answer, isOpen, onClick }: {
         <ChevronDown className={`h-4 w-4 shrink-0 text-gold transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       <div ref={contentRef} className="h-0 overflow-hidden opacity-0">
-        <p className="pb-5 text-sm leading-relaxed text-grey-300">{answer}</p>
+        <p className="px-5 pb-5 text-sm leading-relaxed text-grey-300">{answer}</p>
       </div>
     </div>
   )
@@ -53,9 +53,9 @@ export function ServiceFAQ({ service }: ServiceFAQProps) {
     if (prefersReducedMotion) return
 
     gsap.fromTo('.service-faq-heading > *',
-      { y: 50, opacity: 0 },
+      { y: 50, opacity: 0, filter: 'blur(6px)' },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, filter: 'blur(0px)',
         duration: ANIM.duration.slow,
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,

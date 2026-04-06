@@ -17,9 +17,9 @@ export function ConcernSection({ service }: ConcernSectionProps) {
     if (prefersReducedMotion) return
 
     gsap.fromTo('.concern-text > *',
-      { y: 40, opacity: 0 },
+      { y: 40, opacity: 0, filter: 'blur(6px)' },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, filter: 'blur(0px)',
         duration: ANIM.duration.slow,
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,
@@ -63,7 +63,7 @@ export function ConcernSection({ service }: ConcernSectionProps) {
             {service.concernStats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-xl border border-grey-500/15 bg-black-elevated p-6 transition-colors hover:border-gold/20"
+                className="rounded-xl bg-black-elevated p-6 shadow-md shadow-black/25 transition-all hover:shadow-lg hover:shadow-black/35"
               >
                 <span className="block font-[var(--font-jetbrains)] text-3xl font-bold text-gold">
                   {stat.value}

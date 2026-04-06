@@ -19,9 +19,9 @@ export function EquipmentSection({ service }: EquipmentSectionProps) {
     if (prefersReducedMotion) return
 
     gsap.fromTo('.equipment-heading > *',
-      { y: 50, opacity: 0 },
+      { y: 50, opacity: 0, filter: 'blur(6px)' },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, filter: 'blur(0px)',
         duration: ANIM.duration.slow,
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,
@@ -30,9 +30,9 @@ export function EquipmentSection({ service }: EquipmentSectionProps) {
     )
 
     gsap.fromTo('.equipment-card',
-      { x: 60, opacity: 0 },
+      { x: 40, opacity: 0, scale: 0.95 },
       {
-        x: 0, opacity: 1,
+        x: 0, opacity: 1, scale: 1,
         duration: ANIM.duration.normal,
         stagger: ANIM.stagger.relaxed,
         ease: ANIM.ease.luxe,
@@ -62,9 +62,9 @@ export function EquipmentSection({ service }: EquipmentSectionProps) {
             return (
               <div
                 key={tool.name}
-                className="equipment-card min-w-[280px] shrink-0 snap-start rounded-2xl border border-grey-500/15 bg-gradient-to-b from-black-elevated to-black-soft/80 p-8 transition-all duration-500 hover:border-gold/25 lg:min-w-0"
+                className="equipment-card min-w-[280px] shrink-0 snap-start rounded-2xl bg-gradient-to-b from-black-elevated to-black-soft/80 p-8 shadow-lg shadow-black/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40 lg:min-w-0"
               >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-gold/15 bg-gold/[0.06]">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gold/[0.06]">
                   <Icon className="h-6 w-6 text-gold/80" />
                 </div>
                 <h3 className="mb-1 text-lg font-semibold text-white">{tool.name}</h3>

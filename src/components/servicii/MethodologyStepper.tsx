@@ -30,9 +30,9 @@ export function MethodologyStepper({ service }: MethodologyStepperProps) {
 
     // Heading animation
     gsap.fromTo('.methodology-heading > *',
-      { y: 50, opacity: 0 },
+      { y: 50, opacity: 0, filter: 'blur(6px)' },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, filter: 'blur(0px)',
         duration: ANIM.duration.slow,
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,
@@ -84,9 +84,9 @@ export function MethodologyStepper({ service }: MethodologyStepperProps) {
       const progress = i / (totalSteps - 1)
 
       gsap.fromTo(el,
-        { y: 30, opacity: 0 },
+        { y: 30, opacity: 0, scale: 0.95 },
         {
-          y: 0, opacity: 1,
+          y: 0, opacity: 1, scale: 1,
           duration: ANIM.duration.normal,
           ease: ANIM.ease.luxe,
           scrollTrigger: {
@@ -115,27 +115,39 @@ export function MethodologyStepper({ service }: MethodologyStepperProps) {
 
         {/* Desktop: Horizontal stepper */}
         <div className="hidden lg:block">
-          {/* Step indicators */}
-          <div className="relative mb-12 flex items-center justify-between px-8">
-            {/* Background line */}
-            <div className="absolute left-8 right-8 top-1/2 h-[1px] -translate-y-1/2 bg-grey-500/20" />
+          {/* Step indicators — same grid as content so circles sit centered above cards */}
+          <div className="relative mb-12 grid gap-6" style={{ gridTemplateColumns: `repeat(${steps.length}, 1fr)` }}>
+            {/* Background line — spans from first circle center to last circle center */}
+            <div
+              className="pointer-events-none absolute top-1/2 h-[1px] -translate-y-1/2 bg-grey-500/20"
+              style={{
+                left: `calc(${100 / steps.length / 2}% + 0px)`,
+                right: `calc(${100 / steps.length / 2}% + 0px)`,
+              }}
+            />
             {/* Gold fill line */}
             <div
               ref={lineRef}
-              className="absolute left-8 right-8 top-1/2 h-[1px] -translate-y-1/2 bg-gold"
-              style={{ transformOrigin: 'left center', transform: 'scaleX(0)' }}
+              className="pointer-events-none absolute top-1/2 h-[1px] -translate-y-1/2 bg-gold"
+              style={{
+                left: `calc(${100 / steps.length / 2}% + 0px)`,
+                right: `calc(${100 / steps.length / 2}% + 0px)`,
+                transformOrigin: 'left center',
+                transform: 'scaleX(0)',
+              }}
             />
 
             {steps.map((step, i) => (
-              <div
-                key={i}
-                ref={(el) => { stepsRef.current[i] = el }}
-                className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-gold/30 bg-black-rich transition-colors"
-                style={{ opacity: 0.3 }}
-              >
-                <span className="font-[var(--font-jetbrains)] text-sm font-bold text-gold">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
+              <div key={i} className="flex justify-center">
+                <div
+                  ref={(el) => { stepsRef.current[i] = el }}
+                  className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-gold/30 bg-black-rich transition-colors"
+                  style={{ opacity: 0.3 }}
+                >
+                  <span className="font-[var(--font-jetbrains)] text-sm font-bold text-gold">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -146,7 +158,7 @@ export function MethodologyStepper({ service }: MethodologyStepperProps) {
               <div
                 key={i}
                 ref={(el) => { contentRefs.current[i] = el }}
-                className="rounded-xl border border-grey-500/15 bg-black-elevated p-6 text-center"
+                className="rounded-xl bg-black-elevated p-6 text-center shadow-md shadow-black/25 transition-shadow hover:shadow-lg hover:shadow-black/35"
                 style={{ opacity: 0 }}
               >
                 <h3 className="mb-2 text-base font-semibold text-white">{step.title}</h3>

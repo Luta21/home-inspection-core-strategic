@@ -18,9 +18,9 @@ export function ServiceCTA({ headline }: ServiceCTAProps) {
     if (prefersReducedMotion) return
 
     gsap.fromTo('.service-cta-content > *',
-      { y: 50, opacity: 0 },
+      { y: 50, opacity: 0, filter: 'blur(6px)' },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, filter: 'blur(0px)',
         duration: ANIM.duration.slow,
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,

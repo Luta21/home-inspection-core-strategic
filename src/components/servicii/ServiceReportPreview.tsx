@@ -19,9 +19,9 @@ export function ServiceReportPreview({ service }: ServiceReportPreviewProps) {
     if (prefersReducedMotion) return
 
     gsap.fromTo('.report-preview-heading > *',
-      { y: 50, opacity: 0 },
+      { y: 50, opacity: 0, filter: 'blur(6px)' },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, filter: 'blur(0px)',
         duration: ANIM.duration.slow,
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,
@@ -30,9 +30,9 @@ export function ServiceReportPreview({ service }: ServiceReportPreviewProps) {
     )
 
     gsap.fromTo('.report-preview-mockup',
-      { y: 80, opacity: 0 },
+      { y: 80, opacity: 0, rotateY: 5 },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, rotateY: 0,
         duration: ANIM.duration.luxe,
         ease: ANIM.ease.luxe,
         scrollTrigger: { trigger: '.report-preview-mockup', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
@@ -70,8 +70,8 @@ export function ServiceReportPreview({ service }: ServiceReportPreviewProps) {
         </div>
 
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="report-preview-mockup relative">
-            <div className="relative overflow-hidden rounded-xl border border-gold/20 bg-black-soft p-6 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+          <div className="report-preview-mockup relative" style={{ perspective: '1000px' }}>
+            <div className="relative overflow-hidden rounded-xl bg-black-soft p-6 shadow-2xl shadow-black/50">
               <div className="mb-6 border-b border-grey-500/20 pb-6">
                 <div className="flex items-center gap-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10">
@@ -114,8 +114,8 @@ export function ServiceReportPreview({ service }: ServiceReportPreviewProps) {
               </div>
             </div>
 
-            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-xl border border-gold/10 bg-black-soft" style={{ zIndex: -1 }} />
-            <div className="absolute -bottom-8 -right-8 h-full w-full rounded-xl border border-gold/5 bg-black-soft" style={{ zIndex: -2 }} />
+            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-xl bg-black-soft shadow-lg shadow-black/30" style={{ zIndex: -1 }} />
+            <div className="absolute -bottom-8 -right-8 h-full w-full rounded-xl bg-black-soft shadow-lg shadow-black/30" style={{ zIndex: -2 }} />
           </div>
 
           <div>

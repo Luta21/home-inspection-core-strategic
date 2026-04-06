@@ -18,9 +18,9 @@ export function RiskAvoidanceSection({ service }: RiskAvoidanceSectionProps) {
     if (prefersReducedMotion) return
 
     gsap.fromTo('.risk-heading > *',
-      { y: 50, opacity: 0 },
+      { y: 50, opacity: 0, filter: 'blur(6px)' },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, filter: 'blur(0px)',
         duration: ANIM.duration.slow,
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,
@@ -28,16 +28,19 @@ export function RiskAvoidanceSection({ service }: RiskAvoidanceSectionProps) {
       }
     )
 
-    gsap.fromTo('.risk-card',
-      { y: 60, opacity: 0 },
-      {
-        y: 0, opacity: 1,
-        duration: ANIM.duration.normal,
-        stagger: ANIM.stagger.normal,
-        ease: ANIM.ease.luxe,
-        scrollTrigger: { trigger: '.risk-grid', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
-      }
-    )
+    const cards = gsap.utils.toArray('.risk-card') as HTMLElement[]
+    cards.forEach((card, i) => {
+      gsap.fromTo(card,
+        { x: i % 2 === 0 ? -40 : 40, opacity: 0, scale: 0.95 },
+        {
+          x: 0, opacity: 1, scale: 1,
+          duration: ANIM.duration.normal,
+          delay: i * ANIM.stagger.normal,
+          ease: ANIM.ease.luxe,
+          scrollTrigger: { trigger: '.risk-grid', start: ANIM.scroll.start, toggleActions: ANIM.scroll.toggleOnce },
+        }
+      )
+    })
   }, { scope: sectionRef })
 
   if (service.risks.length === 0) return null
@@ -60,10 +63,10 @@ export function RiskAvoidanceSection({ service }: RiskAvoidanceSectionProps) {
           {service.risks.map((risk) => (
             <div
               key={risk.title}
-              className="risk-card group rounded-xl border border-grey-500/15 bg-gradient-to-b from-black-elevated to-black-soft/80 p-8 transition-all duration-500 hover:border-red-500/25"
+              className="risk-card group rounded-xl bg-gradient-to-b from-black-elevated to-black-soft/80 p-8 shadow-lg shadow-black/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40"
             >
               <div className="mb-5 flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-red-500/15 bg-red-500/[0.06] transition-all duration-400 group-hover:border-red-500/30 group-hover:bg-red-500/10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-red-500/[0.06] transition-all duration-400 group-hover:bg-red-500/10">
                   <AlertTriangle className="h-5 w-5 text-red-400/80 transition-colors duration-400 group-hover:text-red-400" />
                 </div>
                 <span className="rounded-lg bg-red-500/10 px-3 py-1.5 font-[var(--font-jetbrains)] text-sm font-bold text-red-400">

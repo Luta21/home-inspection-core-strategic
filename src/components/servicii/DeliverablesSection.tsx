@@ -20,9 +20,9 @@ export function DeliverablesSection({ service }: DeliverablesSectionProps) {
     if (prefersReducedMotion) return
 
     gsap.fromTo('.deliverables-heading > *',
-      { y: 50, opacity: 0 },
+      { y: 50, opacity: 0, filter: 'blur(6px)' },
       {
-        y: 0, opacity: 1,
+        y: 0, opacity: 1, filter: 'blur(0px)',
         duration: ANIM.duration.slow,
         stagger: ANIM.stagger.normal,
         ease: ANIM.ease.luxe,
@@ -81,7 +81,7 @@ export function DeliverablesSection({ service }: DeliverablesSectionProps) {
             <div
               key={i}
               ref={(el) => { itemsRef.current[i] = el }}
-              className="flex items-start gap-4 rounded-lg border border-grey-500/10 bg-black-elevated/50 px-6 py-4 transition-colors hover:border-gold/15"
+              className="flex items-start gap-4 rounded-lg bg-black-elevated/50 px-6 py-4 shadow-sm shadow-black/20 transition-all hover:shadow-md hover:shadow-black/30"
             >
               <CheckCircle className="check-icon mt-0.5 h-5 w-5 shrink-0 text-gold" style={{ transform: 'scale(0)' }} />
               <span className="text-base text-grey-200">{item}</span>
