@@ -136,11 +136,11 @@ export function ServiceHero({ service }: ServiceHeroProps) {
         priority
         quality={85}
         sizes="100vw"
-        className="object-cover opacity-[0.07]"
+        className="object-cover opacity-70"
       />
 
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black-pure via-black-rich/50 to-black-pure" />
+      {/* 30% black overlay */}
+      <div className="absolute inset-0 bg-black-pure/30" />
 
       {/* Background glow */}
       <div className="hero-glow pointer-events-none absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 scale-0 rounded-full bg-gold/[0.03] opacity-0" />

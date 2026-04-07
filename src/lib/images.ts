@@ -1,7 +1,7 @@
 // Placeholder images from Unsplash — replace with real client photos
 export const IMAGES = {
   hero: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=85',
-  thermalScan: 'https://images.unsplash.com/photo-1597484661973-ee6cd0b6482c?w=800&q=80&fit=crop&crop=center&h=1100',
+  thermalScan: '/images/imagine_termo.png',
   aboutTeam: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80',
   equipmentBg: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80',
   portfolio1: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
@@ -28,8 +28,8 @@ export const IMAGES = {
       methodology: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&q=80',
     },
     'scanare-termografica': {
-      hero: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=85',
-      concern: 'https://images.unsplash.com/photo-1597484661973-ee6cd0b6482c?w=800&q=80',
+      hero: '/images/imagine_termo.png',
+      concern: '/images/imagine_termo.png',
       solution: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&q=80',
       methodology: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
     },

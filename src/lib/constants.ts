@@ -1,25 +1,28 @@
 export const SITE = {
   name: 'Core Strategic Consulting',
   tagline: 'Investiția ta, Verificarea noastră.',
-  phone: '0745 123 456',
-  phoneFormatted: '+40745123456',
-  email: 'contact@corestrategic.ro',
-  url: 'https://corestrategic.ro',
+  phone: '0769 833 269',
+  phoneFormatted: '+40769833269',
+  phoneSecondary: '0727 224 230',
+  phoneSecondaryFormatted: '+40727224230',
+  phoneSecondaryName: 'Lucian',
+  email: 'contact@corestrategicconsulting.com',
+  url: 'https://www.corestrategicconsulting.com',
   location: 'București & Ilfov',
-  whatsapp: '40745123456',
+  whatsapp: '40769833269',
 } as const
 
 export const SERVICES = [
   {
-    slug: 'inspectie-tehnica-imobiliara',
-    title: 'Inspecție Tehnică Imobiliară',
-    shortDesc: 'Evaluare completă a apartamentului sau casei înainte de cumpărare — verificăm structura, instalațiile, hidroizolațiile și finisajele cu echipamente profesionale. Raport detaliat cu fotografii livrat în 48h.',
-    icon: 'Search' as const,
+    slug: 'verificare-documentatie-tehnica',
+    title: 'Verificarea Documentației Tehnice',
+    shortDesc: 'Verificăm documentația tehnică, cartea construcției și corelăm proiectul tehnic cu realitatea de pe teren. Siguranța investiției tale începe cu documentele corecte.',
+    icon: 'FileCheck' as const,
   },
   {
-    slug: 'verificare-structurala',
-    title: 'Verificare Structurală Imobil',
-    shortDesc: 'Verificare armături în stâlpi, grinzi și planșee, concordanță proiect tehnic-execuție, identificare defecte de betonare și vibrare. Opțional: testare grad beton cu sclerometru profesional.',
+    slug: 'verificare-elemente-structuri',
+    title: 'Verificare Elemente Structuri',
+    shortDesc: 'Verificăm armăturile în stâlpi, grinzi și planșee, identificăm defecte de betonare și corelăm execuția cu proiectul tehnic. Opțional: testare grad beton cu sclerometru.',
     icon: 'Shield' as const,
   },
   {

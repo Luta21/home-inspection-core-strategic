@@ -1,0 +1,93 @@
+<h2>Service Page Hero — Which style?</h2>
+<p class="subtitle">The hero sets the tone and must immediately communicate: what this service is, why it matters, and how to take action. Your homepage hero uses a fixed background with staggered text reveal. How should service heroes differ?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0a0a0f; padding: 24px; min-height: 280px; position: relative; overflow: hidden;">
+      <!-- Mockup: Split hero -->
+      <div style="display: flex; gap: 20px; height: 100%;">
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+          <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 3px; color: #C9A84C; margin-bottom: 10px;">Serviciu</div>
+          <div style="font-family: serif; font-size: 22px; color: #fff; line-height: 1.3; margin-bottom: 8px;">Scanare<br>Termografică<br><span style="color: #C9A84C;">Profesională</span></div>
+          <div style="font-size: 10px; color: #888; margin-bottom: 14px; line-height: 1.6;">Detectăm defecte invizibile ochiului liber cu camera Flir E60.</div>
+          <div style="display: flex; gap: 8px;">
+            <div style="background: #C9A84C; color: #0a0a0f; padding: 6px 14px; border-radius: 4px; font-size: 9px; font-weight: 600;">Programează</div>
+            <div style="border: 1px solid #C9A84C44; color: #C9A84C; padding: 6px 14px; border-radius: 4px; font-size: 9px;">0745 123 456</div>
+          </div>
+          <div style="display: flex; gap: 16px; margin-top: 16px;">
+            <div style="font-size: 9px; color: #666;"><span style="color: #C9A84C; font-weight: 700;">1000+</span><br>Proprietăți</div>
+            <div style="font-size: 9px; color: #666;"><span style="color: #C9A84C; font-weight: 700;">15+</span><br>Ani Exp.</div>
+            <div style="font-size: 9px; color: #666;"><span style="color: #C9A84C; font-weight: 700;">48h</span><br>Raport</div>
+          </div>
+        </div>
+        <div style="flex: 0.8; background: linear-gradient(135deg, #1a1a2e, #0d0d1a); border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 1px solid #C9A84C11;">
+          <div style="text-align: center; color: #333; font-size: 10px;">
+            <div style="font-size: 40px; opacity: 0.3;">🔥</div>
+            Thermal Image<br>Placeholder
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Split Hero (Text + Visual)</h3>
+      <p>Left side: title, description, dual CTAs, trust stats. Right side: service-specific visual (thermal image, structural diagram, etc). Clean, professional, informative.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0a0a0f; padding: 0; min-height: 280px; position: relative; overflow: hidden;">
+      <!-- Mockup: Full-width cinematic -->
+      <div style="position: relative; height: 280px; background: linear-gradient(180deg, #0a0a0f 0%, #111128 50%, #0a0a0f 100%);">
+        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+          <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 4px; color: #C9A84C; margin-bottom: 12px;">● Scanare Termografică</div>
+          <div style="font-family: serif; font-size: 26px; color: #fff; line-height: 1.2; margin-bottom: 6px;">Vedem Ce Ochiul</div>
+          <div style="font-family: serif; font-size: 26px; color: #C9A84C; line-height: 1.2; margin-bottom: 14px;">Nu Poate Vedea</div>
+          <div style="font-size: 10px; color: #888; max-width: 300px; margin-bottom: 16px; line-height: 1.6;">Identificăm punți termice, infiltrații și pierderi de căldură cu tehnologie profesională Flir E60.</div>
+          <div style="display: flex; gap: 8px;">
+            <div style="background: #C9A84C; color: #0a0a0f; padding: 8px 20px; border-radius: 4px; font-size: 10px; font-weight: 600;">Solicită Scanare</div>
+            <div style="border: 1px solid #C9A84C44; color: #C9A84C; padding: 8px 20px; border-radius: 4px; font-size: 10px;">Află Mai Multe ↓</div>
+          </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); width: 1px; height: 24px; background: linear-gradient(180deg, #C9A84C, transparent);"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Full-Width Cinematic</h3>
+      <p>Centered, dramatic headline with a bold tagline. Minimal, high-impact. Background can have subtle parallax or grain texture. Matches your homepage's premium feel most closely.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0a0a0f; padding: 24px; min-height: 280px; position: relative; overflow: hidden;">
+      <!-- Mockup: Asymmetric with floating cards -->
+      <div style="position: relative;">
+        <div style="max-width: 60%;">
+          <div style="font-size: 9px; text-transform: uppercase; letter-spacing: 3px; color: #C9A84C; margin-bottom: 8px;">Serviciu Premium</div>
+          <div style="font-family: serif; font-size: 20px; color: #fff; line-height: 1.3; margin-bottom: 10px;">Scanare Termografică <span style="color: #C9A84C;">Profesională</span></div>
+          <div style="font-size: 10px; color: #888; margin-bottom: 14px; line-height: 1.6;">Camera Flir E60 detectează probleme ascunse în structura clădirii.</div>
+          <div style="background: #C9A84C; color: #0a0a0f; padding: 7px 16px; border-radius: 4px; font-size: 9px; font-weight: 600; display: inline-block;">Programează Inspecția</div>
+        </div>
+        <!-- Floating stat cards -->
+        <div style="position: absolute; top: 10px; right: 0; display: flex; flex-direction: column; gap: 8px;">
+          <div style="background: #111; border: 1px solid #C9A84C22; border-radius: 8px; padding: 10px 14px; text-align: center;">
+            <div style="color: #C9A84C; font-weight: 700; font-size: 16px;">-30%</div>
+            <div style="color: #666; font-size: 8px;">Pierderi Termice<br>Detectate</div>
+          </div>
+          <div style="background: #111; border: 1px solid #C9A84C22; border-radius: 8px; padding: 10px 14px; text-align: center;">
+            <div style="color: #C9A84C; font-weight: 700; font-size: 16px;">€2k+</div>
+            <div style="color: #666; font-size: 8px;">Economii<br>Medii</div>
+          </div>
+          <div style="background: #111; border: 1px solid #C9A84C22; border-radius: 8px; padding: 10px 14px; text-align: center;">
+            <div style="color: #C9A84C; font-weight: 700; font-size: 16px;">Flir E60</div>
+            <div style="color: #666; font-size: 8px;">Echipament<br>Profesional</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Asymmetric + Floating Stats</h3>
+      <p>Text on left, floating stat/benefit cards on right that animate in with GSAP stagger. Each card highlights a service-specific metric. Data-driven, modern, engaging.</p>
+    </div>
+  </div>
+</div>

@@ -67,8 +67,8 @@ export function HeroSection() {
             }}
           />
 
-          {/* H1 — Primary SEO heading */}
-          <h1
+          {/* Eyebrow label */}
+          <p
             className="mb-5 font-[var(--font-inter)] text-[11px] font-semibold uppercase tracking-[0.25em] text-gold"
             style={{
               opacity: loaded ? 1 : 0,
@@ -76,12 +76,12 @@ export function HeroSection() {
               transition: 'opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s',
             }}
           >
-            Inspecție Tehnică Imobiliară — București & Ilfov
-          </h1>
+            Core Strategic Consulting — București & Ilfov
+          </p>
 
-          {/* Visual headline — each word staggers in slowly */}
-          <h2 className="mb-6 font-[var(--font-playfair)] text-[clamp(2.5rem,5.5vw,5rem)] font-bold leading-[1.05] tracking-tight">
-            {['Verifică', 'Înainte', 'Să'].map((word, i) => (
+          {/* H1 — Primary SEO heading with top keyword */}
+          <h1 className="mb-6 font-[var(--font-playfair)] text-[clamp(2.5rem,5.5vw,5rem)] font-bold leading-[1.05] tracking-tight">
+            {['Inspecție', 'Tehnică', 'Imobiliară'].map((word, i) => (
               <span key={word}>
                 <span
                   className="inline-block text-white"
@@ -104,9 +104,9 @@ export function HeroSection() {
                 transition: 'opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1) 1.2s, transform 1.6s cubic-bezier(0.16, 1, 0.3, 1) 1.2s',
               }}
             >
-              Investești.
+              Înainte Să Investești.
             </span>
-          </h2>
+          </h1>
 
           {/* Subtitle */}
           <p
