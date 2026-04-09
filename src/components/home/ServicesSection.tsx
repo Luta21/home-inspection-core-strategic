@@ -98,10 +98,10 @@ export function ServicesSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="servicii" className="relative overflow-hidden bg-black-soft py-28 lg:py-36">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section ref={sectionRef} id="servicii" className="relative overflow-hidden bg-black-soft py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="services-heading mb-20 text-center">
+        <div className="services-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Servicii</p>
           <h2 className="mx-auto mb-4 max-w-2xl font-[var(--font-playfair)] text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-white">
             Soluții Complete de{' '}
@@ -115,7 +115,7 @@ export function ServicesSection() {
         </div>
 
         {/* Cards grid */}
-        <div className="services-grid grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+        <div className="services-grid grid gap-4 sm:grid-cols-2 sm:gap-5 md:gap-6 lg:grid-cols-3 lg:gap-8">
           {SERVICES.map((service, i) => {
             const Icon = ICON_MAP[service.icon]
             return (
@@ -136,12 +136,12 @@ export function ServicesSection() {
                 <div className="card-glow pointer-events-none absolute h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 blur-3xl" style={{ background: 'rgba(201,168,76,0.06)' }} />
 
                 {/* Inner content */}
-                <div className="relative z-10 p-8 lg:p-10">
+                <div className="relative z-10 p-6 md:p-7 lg:p-8">
                   {/* Gold accent line */}
-                  <div className="card-gold-line mb-8 h-[1px] w-12 bg-gradient-to-r from-gold to-gold/30" />
+                  <div className="card-gold-line mb-6 h-[1px] w-12 bg-gradient-to-r from-gold to-gold/30 md:mb-8" />
 
                   {/* Small icon */}
-                  <div className="mb-7 flex h-14 w-14 items-center justify-center rounded-xl border border-gold/15 bg-gold/[0.06] transition-all duration-400 group-hover:border-gold/30 group-hover:bg-gold/10 group-hover:shadow-[0_0_20px_rgba(201,168,76,0.08)]">
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl border border-gold/15 bg-gold/[0.06] transition-all duration-400 group-hover:border-gold/30 group-hover:bg-gold/10 group-hover:shadow-[0_0_20px_rgba(201,168,76,0.08)] md:mb-7">
                     <Icon className="h-6 w-6 text-gold/80 transition-colors duration-400 group-hover:text-gold" />
                   </div>
 
@@ -151,12 +151,12 @@ export function ServicesSection() {
                   </h3>
 
                   {/* Description */}
-                  <p className="mb-8 text-[0.9rem] leading-[1.8] text-grey-300/90">
+                  <p className="mb-6 text-[0.9rem] leading-[1.8] text-grey-300/90 md:mb-8">
                     {service.shortDesc}
                   </p>
 
                   {/* CTA */}
-                  <div className="flex items-center gap-2 border-t border-grey-500/10 pt-6">
+                  <div className="flex items-center gap-2 border-t border-grey-500/10 pt-5 md:pt-6">
                     <span className="text-sm font-medium text-gold/80 transition-all duration-300 group-hover:text-gold">
                       Află mai multe
                     </span>

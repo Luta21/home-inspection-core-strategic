@@ -43,9 +43,9 @@ export function WhoNeedsThisSection({ service }: WhoNeedsThisSectionProps) {
   if (service.whoNeedsThis.length === 0) return null
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="who-heading mb-16 text-center">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="who-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
             Este Pentru Tine?
           </p>
@@ -60,7 +60,7 @@ export function WhoNeedsThisSection({ service }: WhoNeedsThisSectionProps) {
           {service.whoNeedsThis.map((item) => (
             <div
               key={item.persona}
-              className="who-card group rounded-xl bg-gradient-to-b from-black-elevated to-black-soft/80 p-8 shadow-lg shadow-black/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40"
+              className="who-card group rounded-xl bg-gradient-to-b from-black-elevated to-black-soft/80 p-6 md:p-7 lg:p-8 shadow-lg shadow-black/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40"
             >
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gold/[0.06] transition-all duration-400 group-hover:bg-gold/10">
                 <User className="h-5 w-5 text-gold/80 transition-colors duration-400 group-hover:text-gold" />

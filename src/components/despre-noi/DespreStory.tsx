@@ -77,13 +77,13 @@ export function DespreStory() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-28 lg:py-36">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-5 lg:gap-16">
           {/* Left — Story content */}
           <div className="lg:col-span-3">
             {/* Heading */}
-            <div className="story-heading mb-12">
+            <div className="story-heading mb-10 sm:mb-12 lg:mb-16">
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
                 Povestea Noastra
               </p>

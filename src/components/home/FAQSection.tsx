@@ -82,12 +82,12 @@ export function FAQSection() {
   }
 
   return (
-    <section ref={sectionRef} id="faq" className="relative overflow-hidden bg-black-rich py-24 lg:py-32">
+    <section ref={sectionRef} id="faq" className="relative overflow-hidden bg-black-rich py-14 sm:py-16 md:py-20 lg:py-28">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="mx-auto max-w-3xl px-5 lg:px-8">
+      <div className="mx-auto max-w-3xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="faq-heading mb-12 text-center">
+        <div className="faq-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Întrebări Frecvente</p>
           <h2 className="mb-4 font-[var(--font-playfair)] text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-white">
             Răspunsuri la Întrebări <span className="text-gold-gradient">Frecvente</span>

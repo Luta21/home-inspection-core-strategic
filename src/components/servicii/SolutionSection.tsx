@@ -54,10 +54,10 @@ export function SolutionSection({ service }: SolutionSectionProps) {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="solution-heading mb-16 text-center">
+        <div className="solution-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
             Solutia Noastra
           </p>
@@ -68,7 +68,7 @@ export function SolutionSection({ service }: SolutionSectionProps) {
         </div>
 
         {/* Service image */}
-        <div className="solution-image relative mb-16 h-64 overflow-hidden rounded-2xl shadow-xl shadow-black/40 lg:h-80">
+        <div className="solution-image relative mb-8 h-64 sm:mb-10 lg:mb-12 overflow-hidden rounded-2xl shadow-xl shadow-black/40 lg:h-80">
           <Image
             src={IMAGES.services[service.slug]?.solution || IMAGES.hero}
             alt={service.title}
@@ -87,7 +87,7 @@ export function SolutionSection({ service }: SolutionSectionProps) {
             return (
               <div
                 key={benefit.title}
-                className="solution-card group rounded-xl bg-gradient-to-b from-black-elevated to-black-soft/80 p-8 shadow-lg shadow-black/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40"
+                className="solution-card group rounded-xl bg-gradient-to-b from-black-elevated to-black-soft/80 p-6 md:p-7 lg:p-8 shadow-lg shadow-black/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/40"
               >
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-gold/[0.06] transition-all duration-400 group-hover:bg-gold/10">
                   <Icon className="h-5 w-5 text-gold/80 transition-colors duration-400 group-hover:text-gold" />

@@ -70,9 +70,9 @@ export function ProblemSection() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="problem-heading mb-16 max-w-2xl">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="problem-heading mb-10 max-w-2xl sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
             De Ce Ai Nevoie De Inspecție Tehnică
           </p>
@@ -88,8 +88,8 @@ export function ProblemSection() {
           <div className="mt-6 h-[2px] w-16 bg-gold" />
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-stretch lg:gap-16">
-          <div className="problem-cards flex flex-col gap-8">
+        <div className="grid gap-8 md:gap-12 lg:grid-cols-2 lg:items-stretch lg:gap-16">
+          <div className="problem-cards flex flex-col gap-6 md:gap-8">
             {PROBLEMS.map((problem, i) => (
               <div
                 key={i}

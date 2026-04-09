@@ -75,10 +75,10 @@ export function ServiceFAQ({ service }: ServiceFAQProps) {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-24 lg:py-32">
-      <div className="mx-auto max-w-3xl px-5 lg:px-8">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-3xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="service-faq-heading mb-12 text-center">
+        <div className="service-faq-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Intrebari Frecvente</p>
           <h2 className="mb-4 font-[var(--font-playfair)] text-[clamp(1.5rem,3vw,2.25rem)] font-bold text-white">
             Raspunsuri la Intrebari <span className="text-gold-gradient">Frecvente</span>

@@ -113,10 +113,10 @@ export function MethodologyStepper({ service }: MethodologyStepperProps) {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="methodology-heading mb-16 text-center">
+        <div className="methodology-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
             Metodologie
           </p>
@@ -127,7 +127,7 @@ export function MethodologyStepper({ service }: MethodologyStepperProps) {
         </div>
 
         {/* Methodology image */}
-        <div className="methodology-image relative mb-16 h-56 overflow-hidden rounded-2xl shadow-xl shadow-black/40 lg:h-72">
+        <div className="methodology-image relative mb-8 h-56 sm:mb-10 lg:mb-12 overflow-hidden rounded-2xl shadow-xl shadow-black/40 lg:h-72">
           <Image
             src={IMAGES.services[service.slug]?.methodology || IMAGES.hero}
             alt={`Metodologie ${service.title}`}
@@ -142,7 +142,7 @@ export function MethodologyStepper({ service }: MethodologyStepperProps) {
         {/* Desktop: Horizontal stepper */}
         <div className="hidden lg:block">
           {/* Step indicators — same grid as content so circles sit centered above cards */}
-          <div className="relative mb-12 grid gap-6" style={{ gridTemplateColumns: `repeat(${steps.length}, 1fr)` }}>
+          <div className="relative mb-8 grid gap-4 sm:gap-5 md:mb-10 md:gap-6 lg:gap-8" style={{ gridTemplateColumns: `repeat(${steps.length}, 1fr)` }}>
             {/* Background line — spans from first circle center to last circle center */}
             <div
               className="pointer-events-none absolute top-1/2 h-[1px] -translate-y-1/2 bg-grey-500/20"
@@ -179,7 +179,7 @@ export function MethodologyStepper({ service }: MethodologyStepperProps) {
           </div>
 
           {/* Step content panels */}
-          <div className="grid gap-6" style={{ gridTemplateColumns: `repeat(${steps.length}, 1fr)` }}>
+          <div className="grid gap-4 sm:gap-5 md:gap-6 lg:gap-8" style={{ gridTemplateColumns: `repeat(${steps.length}, 1fr)` }}>
             {steps.map((step, i) => (
               <div
                 key={i}

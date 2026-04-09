@@ -73,7 +73,7 @@ export function WhyUsSection() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="grain-overlay relative overflow-hidden py-28 lg:py-36">
+    <section ref={sectionRef} className="grain-overlay relative overflow-hidden py-14 sm:py-16 md:py-20 lg:py-28">
       <div className="whyus-bg absolute inset-0 -top-[20%] -bottom-[20%]">
         <Image
           src={IMAGES.equipmentBg}
@@ -85,8 +85,8 @@ export function WhyUsSection() {
         <div className="absolute inset-0 bg-black-pure/85" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="whyus-heading mb-20 text-center">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="whyus-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">De Ce Core Strategic</p>
           <h2 className="mb-4 font-[var(--font-playfair)] text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-white">
             Experiență Dovedită în Inspecție{' '}
@@ -100,7 +100,7 @@ export function WhyUsSection() {
         </div>
 
         {/* Redesigned stat cards */}
-        <div className="stat-cards grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="stat-cards grid gap-4 sm:grid-cols-2 sm:gap-5 md:gap-6 lg:grid-cols-4 lg:gap-8">
           {STATS.map((stat, i) => {
             const Icon = STAT_ICONS[i]
             return (
@@ -129,7 +129,7 @@ export function WhyUsSection() {
                 />
 
                 {/* Content */}
-                <div className="relative z-10 px-8 py-10 text-center lg:py-12">
+                <div className="relative z-10 px-6 py-8 text-center md:px-7 md:py-10 lg:px-8 lg:py-12">
                   {/* Small icon */}
                   <div
                     className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-gold/15 bg-gold/[0.05]"

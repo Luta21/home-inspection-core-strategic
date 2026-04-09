@@ -52,9 +52,9 @@ export function ConcernSection({ service }: ConcernSectionProps) {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:gap-12 lg:grid-cols-5 lg:gap-16">
           {/* Text — 3 columns */}
           <div className="concern-text lg:col-span-3">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">

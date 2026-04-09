@@ -66,10 +66,10 @@ export function ContactForm() {
   const inputClasses = 'w-full rounded-lg border border-grey-500/20 bg-black-elevated px-4 py-3 text-sm text-white placeholder:text-grey-400 transition-colors focus:border-gold focus:outline-none'
 
   return (
-    <section ref={sectionRef} className="bg-black-soft py-24 lg:py-32">
-      <div className="mx-auto max-w-3xl px-5 lg:px-8">
+    <section ref={sectionRef} className="bg-black-soft py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-3xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="cform-heading mb-12 text-center">
+        <div className="cform-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Trimite-ne un Mesaj</p>
           <h2 className="mb-4 font-[var(--font-playfair)] text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-white">
             Solicită o Ofertă <span className="text-gold-gradient">Personalizată</span>

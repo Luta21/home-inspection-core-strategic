@@ -44,7 +44,7 @@ export function ContactHero() {
   return (
     <section
       ref={sectionRef}
-      className="grain-overlay relative flex min-h-[60vh] items-center overflow-hidden bg-black-pure py-24 lg:py-32"
+      className="grain-overlay relative flex min-h-[60vh] items-center overflow-hidden bg-black-pure pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-36 md:pb-24 lg:pt-40 lg:pb-32"
     >
       {/* Grid pattern */}
       <div
@@ -55,7 +55,7 @@ export function ContactHero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-4xl px-5 text-center lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-4xl px-5 text-center sm:px-6 lg:px-8">
         {/* Gold line */}
         <div className="chero-gold-line mx-auto mb-8 h-[2px] w-16 origin-left scale-x-0 bg-gold" />
 

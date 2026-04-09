@@ -122,10 +122,10 @@ export function AboutSection() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} id="despre" className="relative overflow-hidden bg-black-soft py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section ref={sectionRef} id="despre" className="relative overflow-hidden bg-black-soft py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Section heading */}
-        <div className="about-heading mb-16 max-w-2xl lg:mb-20">
+        <div className="about-heading mb-10 max-w-2xl sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Despre Core Strategic Consulting</p>
           <h2 className="mb-4 font-[var(--font-playfair)] text-[clamp(1.75rem,3.5vw,3rem)] font-bold leading-tight text-white">
             Consultanță Tehnică Imobiliară cu{' '}
@@ -137,7 +137,7 @@ export function AboutSection() {
         {/* Pinned layout — image left, scrolling cards right */}
         <div className="about-pinned-wrapper lg:grid lg:grid-cols-2 lg:gap-16">
           {/* Left: Pinned image */}
-          <div className="about-image-col mb-12 lg:mb-0">
+          <div className="about-image-col mb-8 md:mb-10 lg:mb-0">
             <div className="relative overflow-hidden rounded-xl">
               <div className="relative aspect-[3/4]">
                 <Image
@@ -163,11 +163,11 @@ export function AboutSection() {
           </div>
 
           {/* Right: Scrolling cards */}
-          <div className="about-cards-col space-y-6">
+          <div className="about-cards-col space-y-4 sm:space-y-5 md:space-y-6">
             {ABOUT_CARDS.map((card, i) => (
               <div
                 key={i}
-                className="about-card group rounded-xl border border-grey-500/10 bg-black-elevated/50 p-7 transition-all duration-500 hover:border-gold/20 hover:bg-black-elevated/80"
+                className="about-card group rounded-xl border border-grey-500/10 bg-black-elevated/50 p-6 transition-all duration-500 hover:border-gold/20 hover:bg-black-elevated/80 md:p-7 lg:p-8"
               >
                 <div className="mb-4 flex items-center gap-4">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-gold/15 bg-gold/[0.06] transition-colors duration-300 group-hover:bg-gold/10">
@@ -180,7 +180,7 @@ export function AboutSection() {
             ))}
 
             {/* Differentiators checklist below cards */}
-            <div className="about-checks mt-8 space-y-3 border-t border-grey-500/10 pt-8">
+            <div className="about-checks mt-6 space-y-3 border-t border-grey-500/10 pt-6 md:mt-8 md:pt-8">
               <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-gold">Ce Ne Diferențiază</h3>
               {DIFFERENTIATORS.map((item, i) => (
                 <div key={i} className="about-check flex items-start gap-3">

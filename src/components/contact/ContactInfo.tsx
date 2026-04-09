@@ -66,13 +66,13 @@ export function ContactInfo() {
   ]
 
   return (
-    <section ref={sectionRef} className="bg-black-rich py-24 lg:py-32">
-      <div className="mx-auto max-w-5xl px-5 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-3">
+    <section ref={sectionRef} className="bg-black-rich py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
+        <div className="grid gap-4 sm:gap-5 md:grid-cols-3 md:gap-6 lg:gap-8">
           {INFO_CARDS.map((card) => (
             <div
               key={card.title}
-              className="info-card rounded-xl border border-gold/10 bg-black-elevated/50 p-7 text-center opacity-0"
+              className="info-card rounded-xl border border-gold/10 bg-black-elevated/50 p-6 md:p-7 lg:p-8 text-center opacity-0"
             >
               <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-gold/20 bg-gold/5">
                 <card.icon className="h-6 w-6 text-gold" />

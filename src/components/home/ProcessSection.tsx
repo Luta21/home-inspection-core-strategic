@@ -45,16 +45,16 @@ export function ProcessSection() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} id="proces" className="relative overflow-hidden bg-black-rich py-24 lg:py-36">
+    <section ref={sectionRef} id="proces" className="relative overflow-hidden bg-black-rich py-14 sm:py-16 md:py-20 lg:py-28">
       {/* Blueprint grid bg */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: 'linear-gradient(rgba(201,168,76,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.3) 1px, transparent 1px)',
         backgroundSize: '60px 60px',
       }} />
 
-      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="process-heading mb-20 text-center lg:mb-28">
+        <div className="process-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Procesul Nostru</p>
           <h2 className="mb-4 font-[var(--font-playfair)] text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-white">
             Simplu. Profesional. <span className="text-gold-gradient">Transparent.</span>

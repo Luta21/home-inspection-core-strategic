@@ -45,7 +45,7 @@ export function CTASection() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} id="contact" className="grain-overlay relative overflow-hidden py-24 lg:py-32">
+    <section ref={sectionRef} id="contact" className="grain-overlay relative overflow-hidden py-14 sm:py-16 md:py-20 lg:py-28">
       {/* Background with parallax */}
       <div className="cta-bg absolute inset-0 -top-[20%] -bottom-[20%]">
         <Image
@@ -58,8 +58,8 @@ export function CTASection() {
         <div className="absolute inset-0 bg-black-pure/90" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left — Info */}
           <div className="cta-content">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Contact</p>
@@ -67,7 +67,7 @@ export function CTASection() {
               Programează o Inspecție{' '}
               <span className="text-gold-gradient">Astăzi</span>
             </h2>
-            <p className="mb-10 max-w-md text-base leading-relaxed text-grey-300">
+            <p className="mb-8 max-w-md text-base leading-relaxed text-grey-300 md:mb-10">
               Nu lăsa cea mai mare investiție a vieții tale la voia întâmplării.
               Contactează-ne pentru o consultație gratuită.
             </p>
@@ -108,7 +108,7 @@ export function CTASection() {
 
           {/* Right — Form */}
           <div className="cta-form">
-            <form className="rounded-xl border border-grey-500/20 bg-black-elevated p-8">
+            <form className="rounded-xl border border-grey-500/20 bg-black-elevated p-6 md:p-7 lg:p-8">
               <h3 className="mb-6 font-[var(--font-playfair)] text-xl font-semibold text-white">
                 Solicită o Consultanță
               </h3>

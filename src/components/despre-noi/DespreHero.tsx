@@ -37,7 +37,7 @@ export function DespreHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           {/* Gold accent line */}
           <div

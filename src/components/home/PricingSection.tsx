@@ -117,13 +117,13 @@ export function PricingSection() {
   }
 
   return (
-    <section ref={sectionRef} id="preturi" className="relative overflow-hidden bg-black-elevated py-28 lg:py-36">
+    <section ref={sectionRef} id="preturi" className="relative overflow-hidden bg-black-elevated py-14 sm:py-16 md:py-20 lg:py-28">
       {/* Subtle radial glow behind center card */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 h-[600px] w-[600px] rounded-full bg-gold/[0.02] blur-[100px]" />
 
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="pricing-heading mb-20 text-center">
+        <div className="pricing-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Prețuri Transparente</p>
           <h2 className="mb-4 font-[var(--font-playfair)] text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-white">
             Alege Pachetul <span className="text-gold-gradient">Potrivit</span>
@@ -136,7 +136,7 @@ export function PricingSection() {
         </div>
 
         {/* Pricing cards */}
-        <div className="grid gap-6 lg:grid-cols-3 lg:items-center lg:gap-8">
+        <div className="grid gap-4 sm:gap-5 md:gap-6 lg:grid-cols-3 lg:items-center lg:gap-8">
           {PACKAGES.map((pkg, i) => {
             const Icon = PACKAGE_ICONS[i]
             return (
@@ -182,7 +182,7 @@ export function PricingSection() {
                 )}
 
                 {/* Content */}
-                <div className={`relative z-10 ${pkg.highlighted ? 'px-8 pb-10 pt-14 lg:px-10' : 'p-8 lg:p-10'}`}>
+                <div className={`relative z-10 ${pkg.highlighted ? 'px-6 pb-8 pt-12 md:px-7 md:pt-14 lg:px-8 lg:pb-10' : 'p-6 md:p-7 lg:p-8'}`}>
                   {/* Icon + Name */}
                   <div className="mb-6 flex items-center gap-3">
                     <div
@@ -199,7 +199,7 @@ export function PricingSection() {
                   </div>
 
                   {/* Price — big, bold, no background */}
-                  <div className="mb-8">
+                  <div className="mb-6 md:mb-8">
                     <div className="flex items-baseline gap-2">
                       <span className="text-sm text-grey-400">de la</span>
                       <span className={`font-[var(--font-playfair)] text-7xl font-bold leading-none tracking-tight lg:text-8xl ${pkg.highlighted ? 'text-gold' : 'text-white'}`}>
@@ -219,7 +219,7 @@ export function PricingSection() {
                   </div>
 
                   {/* Features */}
-                  <ul className="mb-10 space-y-4">
+                  <ul className="mb-8 space-y-4 md:mb-10">
                     {pkg.features.map((feature) => (
                       <li
                         key={feature}
@@ -254,7 +254,7 @@ export function PricingSection() {
           })}
         </div>
 
-        <p className="mt-10 text-center text-sm text-grey-400">
+        <p className="mt-8 text-center text-sm text-grey-400 md:mt-10">
           Prețuri valabile pentru București și Ilfov. Pentru proprietăți &gt;350mp, solicită ofertă personalizată.
         </p>
       </div>

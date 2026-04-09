@@ -1,0 +1,969 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Core Strategic Consulting" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Core Strategic Consulting" [ref=e6]
+      - navigation [ref=e7]:
+        - generic [ref=e8]:
+          - link "Servicii" [ref=e9] [cursor=pointer]:
+            - /url: "#servicii"
+            - text: Servicii
+            - img [ref=e10]
+          - generic:
+            - generic:
+              - generic:
+                - link "Verificarea Documentației Tehnice Verificăm documentația tehnică, cartea construcției și corelăm proiectul tehnic cu realitatea de pe teren. Siguranța investiției tale începe cu documentele corecte.":
+                  - /url: /servicii/verificare-documentatie-tehnica
+                  - generic:
+                    - img
+                  - generic:
+                    - paragraph: Verificarea Documentației Tehnice
+                    - paragraph: Verificăm documentația tehnică, cartea construcției și corelăm proiectul tehnic cu realitatea de pe teren. Siguranța investiției tale începe cu documentele corecte.
+                - 'link "Verificare Elemente Structuri Verificăm armăturile în stâlpi, grinzi și planșee, identificăm defecte de betonare și corelăm execuția cu proiectul tehnic. Opțional: testare grad beton cu sclerometru."':
+                  - /url: /servicii/verificare-elemente-structuri
+                  - generic:
+                    - img
+                  - generic:
+                    - paragraph: Verificare Elemente Structuri
+                    - paragraph: "Verificăm armăturile în stâlpi, grinzi și planșee, identificăm defecte de betonare și corelăm execuția cu proiectul tehnic. Opțional: testare grad beton cu sclerometru."
+                - link "Scanare Termografică Profesională Detectare punți termice, defecte de izolație la anvelopa clădirii, infiltrații ascunse și pierderi de căldură cu camera profesională Flir E60. Identificăm probleme invizibile ochiului liber.":
+                  - /url: /servicii/scanare-termografica
+                  - generic:
+                    - img
+                  - generic:
+                    - paragraph: Scanare Termografică Profesională
+                    - paragraph: Detectare punți termice, defecte de izolație la anvelopa clădirii, infiltrații ascunse și pierderi de căldură cu camera profesională Flir E60. Identificăm probleme invizibile ochiului liber.
+                - link "Verificare Instalații Complete Audit complet al instalațiilor electrice, sanitare, de încălzire și climatizare. Verificăm calitatea execuției, conformitatea cu normativele și identificăm riscuri potențiale.":
+                  - /url: /servicii/verificare-instalatii
+                  - generic:
+                    - img
+                  - generic:
+                    - paragraph: Verificare Instalații Complete
+                    - paragraph: Audit complet al instalațiilor electrice, sanitare, de încălzire și climatizare. Verificăm calitatea execuției, conformitatea cu normativele și identificăm riscuri potențiale.
+                - link "Determinare Umiditate Structuri Măsurare precisă a umidității cu higrometrul profesional Flir MR160. Identificăm sursa infiltrațiilor — acoperiș, fațadă, fundație sau conducte sparte — și recomandăm soluții de remediere.":
+                  - /url: /servicii/determinare-umiditate
+                  - generic:
+                    - img
+                  - generic:
+                    - paragraph: Determinare Umiditate Structuri
+                    - paragraph: Măsurare precisă a umidității cu higrometrul profesional Flir MR160. Identificăm sursa infiltrațiilor — acoperiș, fațadă, fundație sau conducte sparte — și recomandăm soluții de remediere.
+                - link "Expertize Tehnice de Specialitate Expertize tehnice pentru mansardare, supraetajare, extindere, consolidare, restaurare, demolare parțială sau schimbare destinație imobil. Documentație conformă cu legislația în vigoare.":
+                  - /url: /servicii/expertize-tehnice
+                  - generic:
+                    - img
+                  - generic:
+                    - paragraph: Expertize Tehnice de Specialitate
+                    - paragraph: Expertize tehnice pentru mansardare, supraetajare, extindere, consolidare, restaurare, demolare parțială sau schimbare destinație imobil. Documentație conformă cu legislația în vigoare.
+              - generic:
+                - link "Vezi Toate Serviciile →":
+                  - /url: "#servicii"
+                  - text: Vezi Toate Serviciile
+                  - generic: →
+        - link "Cum Funcționează" [ref=e12] [cursor=pointer]:
+          - /url: "#proces"
+          - text: Cum Funcționează
+        - link "Prețuri" [ref=e13] [cursor=pointer]:
+          - /url: "#preturi"
+          - text: Prețuri
+        - link "Despre Noi" [ref=e14] [cursor=pointer]:
+          - /url: /despre-noi
+          - text: Despre Noi
+        - link "Blog" [ref=e15] [cursor=pointer]:
+          - /url: /blog
+          - text: Blog
+        - link "Contact" [ref=e16] [cursor=pointer]:
+          - /url: /contact
+          - text: Contact
+      - generic [ref=e17]:
+        - link "0769 833 269" [ref=e18] [cursor=pointer]:
+          - /url: tel:+40769833269
+          - img [ref=e19]
+          - text: 0769 833 269
+        - link "Programează Inspecția" [ref=e21] [cursor=pointer]:
+          - /url: "#contact"
+  - generic [ref=e22]:
+    - img "Inspecție tehnică imobiliară profesională în București — verificare apartament și casă înainte de cumpărare" [ref=e24]
+    - generic [ref=e28]:
+      - paragraph [ref=e29]: Core Strategic Consulting — București & Ilfov
+      - heading "Inspecție Tehnică Imobiliară Înainte Să Investești." [level=1] [ref=e30]:
+        - generic [ref=e32]: Inspecție
+        - generic [ref=e34]: Tehnică
+        - generic [ref=e36]: Imobiliară
+        - generic [ref=e37]: Înainte Să Investești.
+      - paragraph [ref=e38]: Inspecție tehnică imobiliară profesională cu echipamente Flir de ultimă generație. Peste 1.000 de apartamente și case verificate în București și Ilfov. Raport detaliat cu fotografii și estimări de costuri livrat în 48h.
+      - generic [ref=e39]:
+        - link "Programează Inspecția" [ref=e40] [cursor=pointer]:
+          - /url: "#contact"
+          - text: Programează Inspecția
+          - img [ref=e41]
+        - link "Vezi Raport Exemplu" [ref=e43] [cursor=pointer]:
+          - /url: "#raport"
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: 1000+
+          - generic [ref=e47]: Proprietăți Inspectate
+        - generic [ref=e48]:
+          - generic [ref=e49]: 15+
+          - generic [ref=e50]: Ani Experiență Construcții
+        - generic [ref=e51]:
+          - generic [ref=e52]: 48h
+          - generic [ref=e53]: Livrare Raport
+    - generic [ref=e55]:
+      - generic [ref=e56]: Scroll
+      - img [ref=e57]
+  - main [ref=e60]:
+    - generic [ref=e62]:
+      - generic [ref=e65]: Echipamente Flir Profesionale
+      - generic [ref=e68]: 1000+ Proprietăți Inspectate
+      - generic [ref=e71]: Rapoarte Detaliate cu Fotografii
+      - generic [ref=e74]: 15+ Ani Experiență
+      - generic [ref=e77]: Verificare Non-Distructivă
+      - generic [ref=e80]: Specializare Hidroizolații
+      - generic [ref=e83]: București & Ilfov
+      - generic [ref=e86]: Estimare Costuri Remediere
+      - generic [ref=e89]: Echipamente Flir Profesionale
+      - generic [ref=e92]: 1000+ Proprietăți Inspectate
+      - generic [ref=e95]: Rapoarte Detaliate cu Fotografii
+      - generic [ref=e98]: 15+ Ani Experiență
+      - generic [ref=e101]: Verificare Non-Distructivă
+      - generic [ref=e104]: Specializare Hidroizolații
+      - generic [ref=e107]: București & Ilfov
+      - generic [ref=e110]: Estimare Costuri Remediere
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - paragraph [ref=e114]: De Ce Ai Nevoie De Inspecție Tehnică
+        - heading "Nu Cumpăra Apartament Fără Să Verifici" [level=2] [ref=e115]
+        - paragraph [ref=e116]: Cea mai mare investiție a vieții tale — un apartament sau o casă în București — merită o verificare profesională. Problemele ascunse în structură, instalații și hidroizolații costă mult mai mult decât o inspecție tehnică imobiliară.
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - generic [ref=e120]:
+            - generic [ref=e121]: 73%
+            - heading "Defecte Ascunse" [level=3] [ref=e122]
+            - paragraph [ref=e123]: din apartamentele din București au cel puțin un defect ascuns care nu poate fi identificat fără echipamente profesionale de inspecție tehnică.
+          - generic [ref=e124]:
+            - generic [ref=e125]: 45%
+            - heading "Probleme Structurale Invizibile" [level=3] [ref=e126]
+            - paragraph [ref=e127]: din problemele structurale — fisuri în armături, defecte de betonare, punți termice — rămân nedetectate fără scanare termografică și verificare cu sclerometru.
+          - generic [ref=e128]:
+            - generic [ref=e129]: €15.000+
+            - heading "Costuri Neprevăzute" [level=3] [ref=e130]
+            - paragraph [ref=e131]: este costul mediu al reparațiilor neprevăzute descoperite după achiziție. O inspecție tehnică de 350-800 EUR te poate proteja de pierderi majore.
+        - generic [ref=e133]:
+          - img "Scanare termografică apartament București — detectare punți termice și infiltrații cu camera profesională Flir E60" [ref=e134]
+          - generic [ref=e135]:
+            - paragraph [ref=e136]: Scanare Termografică Profesională
+            - paragraph [ref=e137]: Defecte de izolație termică și infiltrații ascunse, detectate cu camera profesională Flir E60. Identificăm punți termice, umiditate în pereți și pierderi de căldură invizibile cu ochiul liber.
+    - generic [ref=e138]:
+      - generic:
+        - img
+      - generic:
+        - img
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - heading "Nu risca — verifică înainte să cumperi." [level=3] [ref=e142]
+          - paragraph [ref=e143]: Programează o inspecție tehnică și primește raportul în 48h.
+        - generic [ref=e144]:
+          - link "0769 833 269" [ref=e145] [cursor=pointer]:
+            - /url: tel:+40769833269
+            - img [ref=e146]
+            - text: 0769 833 269
+          - link "Programează Acum" [ref=e148] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Programează Acum
+            - img [ref=e149]
+    - generic [ref=e152]:
+      - generic [ref=e153]:
+        - paragraph [ref=e154]: Servicii
+        - heading "Soluții Complete de Inspecție Tehnică" [level=2] [ref=e155]
+        - paragraph [ref=e156]: Echipamente profesionale, metodologie riguroasă și rapoarte detaliate pentru fiecare tip de proprietate.
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - generic:
+            - img
+          - generic [ref=e160]:
+            - img [ref=e163]
+            - heading "Verificarea Documentației Tehnice" [level=3] [ref=e167]
+            - paragraph [ref=e168]: Verificăm documentația tehnică, cartea construcției și corelăm proiectul tehnic cu realitatea de pe teren. Siguranța investiției tale începe cu documentele corecte.
+            - generic [ref=e169]:
+              - generic [ref=e170]: Află mai multe
+              - img [ref=e171]
+        - generic [ref=e173]:
+          - generic:
+            - img
+          - generic [ref=e174]:
+            - img [ref=e177]
+            - heading "Verificare Elemente Structuri" [level=3] [ref=e179]
+            - paragraph [ref=e180]: "Verificăm armăturile în stâlpi, grinzi și planșee, identificăm defecte de betonare și corelăm execuția cu proiectul tehnic. Opțional: testare grad beton cu sclerometru."
+            - generic [ref=e181]:
+              - generic [ref=e182]: Află mai multe
+              - img [ref=e183]
+        - generic [ref=e185]:
+          - generic:
+            - img
+          - generic [ref=e186]:
+            - img [ref=e189]
+            - heading "Scanare Termografică Profesională" [level=3] [ref=e191]
+            - paragraph [ref=e192]: Detectare punți termice, defecte de izolație la anvelopa clădirii, infiltrații ascunse și pierderi de căldură cu camera profesională Flir E60. Identificăm probleme invizibile ochiului liber.
+            - generic [ref=e193]:
+              - generic [ref=e194]: Află mai multe
+              - img [ref=e195]
+        - generic [ref=e197]:
+          - generic:
+            - img
+          - generic [ref=e198]:
+            - img [ref=e201]
+            - heading "Verificare Instalații Complete" [level=3] [ref=e203]
+            - paragraph [ref=e204]: Audit complet al instalațiilor electrice, sanitare, de încălzire și climatizare. Verificăm calitatea execuției, conformitatea cu normativele și identificăm riscuri potențiale.
+            - generic [ref=e205]:
+              - generic [ref=e206]: Află mai multe
+              - img [ref=e207]
+        - generic [ref=e209]:
+          - generic:
+            - img
+          - generic [ref=e210]:
+            - img [ref=e213]
+            - heading "Determinare Umiditate Structuri" [level=3] [ref=e216]
+            - paragraph [ref=e217]: Măsurare precisă a umidității cu higrometrul profesional Flir MR160. Identificăm sursa infiltrațiilor — acoperiș, fațadă, fundație sau conducte sparte — și recomandăm soluții de remediere.
+            - generic [ref=e218]:
+              - generic [ref=e219]: Află mai multe
+              - img [ref=e220]
+        - generic [ref=e222]:
+          - generic:
+            - img
+          - generic [ref=e223]:
+            - img [ref=e226]
+            - heading "Expertize Tehnice de Specialitate" [level=3] [ref=e230]
+            - paragraph [ref=e231]: Expertize tehnice pentru mansardare, supraetajare, extindere, consolidare, restaurare, demolare parțială sau schimbare destinație imobil. Documentație conformă cu legislația în vigoare.
+            - generic [ref=e232]:
+              - generic [ref=e233]: Află mai multe
+              - img [ref=e234]
+    - generic [ref=e236]:
+      - generic:
+        - generic: “
+        - generic: ”
+      - generic [ref=e237]:
+        - generic [ref=e238]:
+          - paragraph [ref=e239]: Recenzii Clienți
+          - heading "Ce Spun Clienții Despre Inspecțiile Noastre" [level=2] [ref=e240]
+          - paragraph [ref=e241]: Feedback real de la proprietari și investitori care au ales o inspecție tehnică imobiliară profesională înainte de a cumpăra.
+        - generic [ref=e243]:
+          - generic [ref=e246]:
+            - generic [ref=e247]:
+              - generic [ref=e248]: “
+              - generic [ref=e249]: Economie €8.000
+            - generic [ref=e250]:
+              - img [ref=e251]
+              - img [ref=e253]
+              - img [ref=e255]
+              - img [ref=e257]
+              - img [ref=e259]
+            - paragraph [ref=e261]: Am descoperit infiltrații la acoperiș pe care nu le-am fi observat niciodată cu ochiul liber. Scanarea termografică a arătat clar unde erau problemele. Raportul detaliat ne-a ajutat să negociem €8.000 din prețul apartamentului. Cea mai bună investiție de 500 EUR pe care am făcut-o.
+            - generic [ref=e262]:
+              - img "Alexandru M." [ref=e264]
+              - generic [ref=e265]:
+                - paragraph [ref=e266]: Alexandru M.
+                - paragraph [ref=e267]: Cumpărător apartament, Sector 3 București
+          - generic [ref=e270]:
+            - generic [ref=e271]:
+              - generic [ref=e272]: “
+              - generic [ref=e273]: Economie €15.000+
+            - generic [ref=e274]:
+              - img [ref=e275]
+              - img [ref=e277]
+              - img [ref=e279]
+              - img [ref=e281]
+              - img [ref=e283]
+            - paragraph [ref=e285]: Profesionalism impecabil de la programare până la livrarea raportului. Au identificat probleme cu hidroizolația la fundație care ar fi costat €15.000+ pe termen lung. Echipamentele Flir fac diferența — am văzut literal căldura care se pierdea prin pereți și ferestre.
+            - generic [ref=e286]:
+              - img "Maria D." [ref=e288]
+              - generic [ref=e289]:
+                - paragraph [ref=e290]: Maria D.
+                - paragraph [ref=e291]: Proprietar vilă, Voluntari, Ilfov
+          - generic [ref=e294]:
+            - generic [ref=e295]:
+              - generic [ref=e296]: “
+              - generic [ref=e297]: Economie 30+ pagini
+            - generic [ref=e298]:
+              - img [ref=e299]
+              - img [ref=e301]
+              - img [ref=e303]
+              - img [ref=e305]
+              - img [ref=e307]
+            - paragraph [ref=e309]: Colaborez cu Core Strategic pentru fiecare achiziție din portofoliul meu. Rapoartele lor de 30+ pagini cu estimări detaliate de costuri mă ajută să iau decizii informate. Au identificat probleme structurale la un apartament pe care eram gata să-l cumpăr — m-au salvat de o investiție proastă.
+            - generic [ref=e310]:
+              - img "Radu C." [ref=e312]
+              - generic [ref=e313]:
+                - paragraph [ref=e314]: Radu C.
+                - paragraph [ref=e315]: Investitor imobiliar, București
+        - generic [ref=e316]:
+          - generic [ref=e317]:
+            - generic [ref=e318]: 100+
+            - generic [ref=e319]: Inspecții Finalizate
+          - generic [ref=e320]:
+            - generic [ref=e321]: "5.0"
+            - generic [ref=e322]: Rating Mediu
+          - generic [ref=e323]:
+            - generic [ref=e324]: €2M+
+            - generic [ref=e325]: Economii Clienți
+    - generic [ref=e328]:
+      - generic [ref=e329]:
+        - paragraph [ref=e330]: Procesul Nostru
+        - heading "Simplu. Profesional. Transparent." [level=2] [ref=e331]
+      - generic [ref=e334]:
+        - generic [ref=e335]:
+          - img [ref=e336]
+          - generic [ref=e339]:
+            - generic [ref=e340]: "01"
+            - heading "Programare" [level=3] [ref=e341]
+            - paragraph [ref=e342]: Alege data și tipul inspecției online sau telefonic. Confirmăm în maxim 2 ore.
+        - generic [ref=e343]:
+          - img [ref=e344]
+          - generic [ref=e347]:
+            - generic [ref=e348]: "02"
+            - heading "Inspecție" [level=3] [ref=e349]
+            - paragraph [ref=e350]: Echipa noastră verifică proprietatea cu echipamente profesionale Flir.
+        - generic [ref=e351]:
+          - img [ref=e352]
+          - generic [ref=e355]:
+            - generic [ref=e356]: "03"
+            - heading "Raport" [level=3] [ref=e357]
+            - paragraph [ref=e358]: Primești raportul detaliat cu fotografii și recomandări în format digital.
+        - generic [ref=e359]:
+          - img [ref=e360]
+          - generic [ref=e363]:
+            - generic [ref=e364]: "04"
+            - heading "Decizie" [level=3] [ref=e365]
+            - paragraph [ref=e366]: Ia cea mai bună decizie pentru investiția ta, cu date concrete în mână.
+    - generic [ref=e368]:
+      - generic [ref=e369]:
+        - paragraph [ref=e370]: Despre Core Strategic Consulting
+        - heading "Consultanță Tehnică Imobiliară cu Experiență Reală" [level=2] [ref=e371]
+      - generic [ref=e373]:
+        - generic [ref=e375]:
+          - img "Echipa Core Strategic Consulting — inspecție tehnică imobiliară profesională cu echipamente Flir" [ref=e377]
+          - generic [ref=e379]:
+            - generic [ref=e380]: 1000+
+            - generic [ref=e381]: Proprietăți Inspectate
+        - generic [ref=e383]:
+          - generic [ref=e384]:
+            - generic [ref=e385]:
+              - img [ref=e387]
+              - heading "15+ Ani în Construcții" [level=3] [ref=e391]
+            - paragraph [ref=e392]: Compania noastră este specializată în consultanță tehnică imobiliară, oferind soluții profesioniste bazate pe o experiență de peste 15 ani în domeniul construcțiilor.
+          - generic [ref=e393]:
+            - generic [ref=e394]:
+              - img [ref=e396]
+              - heading "Expertiză în Hidroizolații" [level=3] [ref=e398]
+            - paragraph [ref=e399]: Expertiza practică în lucrări de hidroizolații pentru fundații tip radier, terase, case cu acoperiș mediteranean și proiecte de infrastructură ne oferă o perspectivă tehnică aprofundată.
+          - generic [ref=e400]:
+            - generic [ref=e401]:
+              - img [ref=e403]
+              - heading "1.000+ Proprietăți Inspectate" [level=3] [ref=e405]
+            - paragraph [ref=e406]: Portofoliul nostru include peste 1.000 de imobile inspectate tehnic și reabilitate termic și hidroizolant în București și Ilfov — un reper important al încrederii clienților.
+          - generic [ref=e407]:
+            - generic [ref=e408]:
+              - img [ref=e410]
+              - heading "Metodologie Riguroasă" [level=3] [ref=e414]
+            - paragraph [ref=e415]: Fiecare inspecție tehnică este realizată cu echipamente profesionale de ultimă generație și urmează o metodologie care acoperă structura, instalațiile, hidroizolațiile și finisajele.
+          - generic [ref=e416]:
+            - heading "Ce Ne Diferențiază" [level=3] [ref=e417]
+            - generic [ref=e418]:
+              - img [ref=e419]
+              - generic [ref=e422]: 15+ ani experiență directă în construcții, hidroizolații și termosisteme
+            - generic [ref=e423]:
+              - img [ref=e424]
+              - generic [ref=e427]: Camera termografică profesională Flir E60 pentru detectare punți termice
+            - generic [ref=e428]:
+              - img [ref=e429]
+              - generic [ref=e432]: Higrometru de contact Flir MR160 pentru măsurarea precisă a umidității
+            - generic [ref=e433]:
+              - img [ref=e434]
+              - generic [ref=e437]: Peste 1.000 de apartamente și case inspectate în București și Ilfov
+            - generic [ref=e438]:
+              - img [ref=e439]
+              - generic [ref=e442]: Rapoarte detaliate de 25-35 pagini cu fotografii și estimări de costuri
+            - generic [ref=e443]:
+              - img [ref=e444]
+              - generic [ref=e447]: Consultanță post-inspecție pentru negocierea prețului proprietății
+    - generic [ref=e449]:
+      - paragraph [ref=e450]: Consultanță gratuită pentru proprietatea ta. Sună acum sau completează formularul — răspundem în maxim 2 ore.
+      - link "Solicită Consultanță Gratuită" [ref=e451] [cursor=pointer]:
+        - /url: "#contact"
+        - text: Solicită Consultanță Gratuită
+        - img [ref=e452]
+    - generic [ref=e454]:
+      - img "Echipamente profesionale de inspecție tehnică imobiliară — cameră termografică Flir E60" [ref=e456]
+      - generic [ref=e458]:
+        - generic [ref=e459]:
+          - paragraph [ref=e460]: De Ce Core Strategic
+          - heading "Experiență Dovedită în Inspecție Imobiliară" [level=2] [ref=e461]
+          - paragraph [ref=e462]: Cifrele care demonstrează de ce peste 1.000 de clienți din București și Ilfov ne-au ales pentru verificarea proprietăților lor.
+        - generic [ref=e464]:
+          - generic [ref=e465]:
+            - generic:
+              - img
+            - generic [ref=e466]:
+              - img [ref=e468]
+              - generic [ref=e472]:
+                - generic [ref=e473]: "0"
+                - generic [ref=e474]: +
+              - paragraph [ref=e476]: Proprietăți Inspectate
+          - generic [ref=e477]:
+            - generic:
+              - img
+            - generic [ref=e478]:
+              - img [ref=e480]
+              - generic [ref=e482]:
+                - generic [ref=e483]: "0"
+                - generic [ref=e484]: +
+              - paragraph [ref=e486]: Ani Experiență
+          - generic [ref=e487]:
+            - generic:
+              - img
+            - generic [ref=e488]:
+              - img [ref=e490]
+              - generic [ref=e493]:
+                - generic [ref=e494]: "0"
+                - generic [ref=e495]: h
+              - paragraph [ref=e497]: Raport Livrat
+          - generic [ref=e498]:
+            - generic:
+              - img
+            - generic [ref=e499]:
+              - img [ref=e501]
+              - generic [ref=e503]:
+                - generic [ref=e504]: "0"
+                - generic [ref=e505]: "%"
+              - paragraph [ref=e507]: Clienți Mulțumiți
+    - generic [ref=e510]:
+      - generic [ref=e511]:
+        - paragraph [ref=e512]: Raport Tehnic Rezidențial
+        - heading "Raport de Inspecție Tehnică Detaliat — Totul Documentat" [level=2] [ref=e513]
+        - paragraph [ref=e514]: Fiecare inspecție se finalizează cu un raport tehnic rezidențial complet, de 25-35 pagini, care acoperă toate aspectele proprietății — de la structură și instalații până la finisaje și protecție la incendiu. Un document profesional care te ajută să iei cea mai bună decizie.
+      - generic [ref=e516]:
+        - generic [ref=e518]:
+          - generic [ref=e520]:
+            - img [ref=e522]
+            - generic [ref=e525]:
+              - heading "RAPORT TEHNIC REZIDENȚIAL" [level=3] [ref=e526]
+              - paragraph [ref=e527]: Core Strategic Consulting
+          - generic [ref=e529]:
+            - generic [ref=e530]: Scoring General Imobil
+            - generic [ref=e531]:
+              - generic [ref=e532]: "8"
+              - generic [ref=e533]: / 10
+          - generic [ref=e536]:
+            - generic [ref=e537]:
+              - generic [ref=e538]:
+                - generic [ref=e539]: "01"
+                - generic [ref=e540]: Detalii Inspecție
+              - generic [ref=e541]:
+                - generic [ref=e542]: IN
+                - generic [ref=e543]: NI
+                - generic [ref=e544]: NP
+                - generic [ref=e545]: D
+            - generic [ref=e546]:
+              - generic [ref=e547]:
+                - generic [ref=e548]: "02"
+                - generic [ref=e549]: Documentație Tehnică
+              - generic [ref=e550]:
+                - generic [ref=e551]: IN
+                - generic [ref=e552]: NI
+                - generic [ref=e553]: NP
+                - generic [ref=e554]: D
+            - generic [ref=e555]:
+              - generic [ref=e556]:
+                - generic [ref=e557]: "03"
+                - generic [ref=e558]: Structură
+              - generic [ref=e559]:
+                - generic [ref=e560]: IN
+                - generic [ref=e561]: NI
+                - generic [ref=e562]: NP
+                - generic [ref=e563]: D
+            - generic [ref=e564]:
+              - generic [ref=e565]:
+                - generic [ref=e566]: "04"
+                - generic [ref=e567]: Acoperiș
+              - generic [ref=e568]:
+                - generic [ref=e569]: IN
+                - generic [ref=e570]: NI
+                - generic [ref=e571]: NP
+                - generic [ref=e572]: D
+            - generic [ref=e573]:
+              - generic [ref=e574]:
+                - generic [ref=e575]: "05"
+                - generic [ref=e576]: Finisaje
+              - generic [ref=e577]:
+                - generic [ref=e578]: IN
+                - generic [ref=e579]: NI
+                - generic [ref=e580]: NP
+                - generic [ref=e581]: D
+            - generic [ref=e582]:
+              - generic [ref=e583]:
+                - generic [ref=e584]: "06"
+                - generic [ref=e585]: Tâmplărie
+              - generic [ref=e586]:
+                - generic [ref=e587]: IN
+                - generic [ref=e588]: NI
+                - generic [ref=e589]: NP
+                - generic [ref=e590]: D
+            - generic [ref=e591]:
+              - generic [ref=e592]:
+                - generic [ref=e593]: "07"
+                - generic [ref=e594]: Instalații Electrice
+              - generic [ref=e595]:
+                - generic [ref=e596]: IN
+                - generic [ref=e597]: NI
+                - generic [ref=e598]: NP
+                - generic [ref=e599]: D
+            - generic [ref=e600]:
+              - generic [ref=e601]:
+                - generic [ref=e602]: "08"
+                - generic [ref=e603]: Instalații Sanitare
+              - generic [ref=e604]:
+                - generic [ref=e605]: IN
+                - generic [ref=e606]: NI
+                - generic [ref=e607]: NP
+                - generic [ref=e608]: D
+            - generic [ref=e609]:
+              - generic [ref=e610]:
+                - generic [ref=e611]: "09"
+                - generic [ref=e612]: Protecție Incendiu
+              - generic [ref=e613]:
+                - generic [ref=e614]: IN
+                - generic [ref=e615]: NI
+                - generic [ref=e616]: NP
+                - generic [ref=e617]: D
+            - generic [ref=e618]:
+              - generic [ref=e619]:
+                - generic [ref=e620]: "10"
+                - generic [ref=e621]: Releveu Fotografic
+              - generic [ref=e622]:
+                - generic [ref=e623]: IN
+                - generic [ref=e624]: NI
+                - generic [ref=e625]: NP
+                - generic [ref=e626]: D
+          - generic [ref=e627]:
+            - generic [ref=e628]: Core Strategic Consulting
+            - generic [ref=e629]: Pagina 2 din 32
+        - generic [ref=e632]:
+          - heading "Ce Conține Raportul de Inspecție" [level=3] [ref=e633]
+          - paragraph [ref=e634]: Raportul tehnic rezidențial folosește sistemul de clasificare IN (Inspectat) / NI (Neinspectat) / NP (Nu este prezent) / D (Defect) pentru fiecare element verificat, oferindu-vă o imagine clară și completă.
+          - generic [ref=e635]:
+            - generic [ref=e636]:
+              - img [ref=e637]
+              - generic [ref=e640]: 25-35 pagini de analiză detaliată
+            - generic [ref=e641]:
+              - img [ref=e642]
+              - generic [ref=e645]: Fotografii HD pentru fiecare defect identificat
+            - generic [ref=e646]:
+              - img [ref=e647]
+              - generic [ref=e650]: Imagini termografice cu camera Flir E60
+            - generic [ref=e651]:
+              - img [ref=e652]
+              - generic [ref=e655]: Scoring general al imobilului (1-10)
+            - generic [ref=e656]:
+              - img [ref=e657]
+              - generic [ref=e660]: Sistem IN/NI/NP/D pentru fiecare element
+            - generic [ref=e661]:
+              - img [ref=e662]
+              - generic [ref=e665]: Estimare costuri de remediere per defect
+            - generic [ref=e666]:
+              - img [ref=e667]
+              - generic [ref=e670]: Recomandări prioritizate de intervenție
+            - generic [ref=e671]:
+              - img [ref=e672]
+              - generic [ref=e675]: Format digital PDF — livrat în 48h
+          - generic [ref=e676]:
+            - link "Solicită Inspecție" [ref=e677] [cursor=pointer]:
+              - /url: "#contact"
+              - text: Solicită Inspecție
+              - img [ref=e678]
+            - link "Descarcă Raport Exemplu" [ref=e680] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e681]
+              - text: Descarcă Raport Exemplu
+      - generic [ref=e684]:
+        - heading "Cele 17 Capitole Verificate în Fiecare Inspecție" [level=3] [ref=e685]
+        - generic [ref=e686]:
+          - generic [ref=e687]:
+            - img [ref=e689]
+            - generic [ref=e692]:
+              - heading "Detalii Inspecție & Scoring" [level=4] [ref=e693]
+              - paragraph [ref=e694]: Scor general al imobilului de la 1 la 10, bazat pe normativele tehnice în vigoare.
+          - generic [ref=e695]:
+            - img [ref=e697]
+            - generic [ref=e699]:
+              - heading "Verificare Structurală" [level=4] [ref=e700]
+              - paragraph [ref=e701]: Stâlpi, grinzi, planșee, armături — concordanță proiect-execuție și defecte de betonare.
+          - generic [ref=e702]:
+            - img [ref=e704]
+            - generic [ref=e707]:
+              - heading "Subsol, Acoperiș & Exterior" [level=4] [ref=e708]
+              - paragraph [ref=e709]: Fundație, hidroizolații, acoperiș, fațade, terase, balcoane, alei și ziduri de sprijin.
+          - generic [ref=e710]:
+            - img [ref=e712]
+            - generic [ref=e714]:
+              - heading "Tâmplărie & Finisaje" [level=4] [ref=e715]
+              - paragraph [ref=e716]: Glafuri, pierderi termice la ferestre, starea finisajelor interioare și exterioare.
+          - generic [ref=e717]:
+            - img [ref=e719]
+            - generic [ref=e721]:
+              - heading "Instalații Electrice" [level=4] [ref=e722]
+              - paragraph [ref=e723]: Tablou electric, prize, iluminat, protecție la scurtcircuit, calitate cablaj și siguranțe.
+          - generic [ref=e724]:
+            - img [ref=e726]
+            - generic [ref=e729]:
+              - heading "Instalații Sanitare & Încălzire" [level=4] [ref=e730]
+              - paragraph [ref=e731]: Conducte apă, canalizare, centrală termică, calorifere, climatizare — presiune și etanșeitate.
+          - generic [ref=e732]:
+            - img [ref=e734]
+            - generic [ref=e736]:
+              - heading "Protecție Incendiu" [level=4] [ref=e737]
+              - paragraph [ref=e738]: Detectoare fum, monoxid de carbon, ignifugare, mijloace de protecție prezente.
+          - generic [ref=e739]:
+            - img [ref=e741]
+            - generic [ref=e745]:
+              - heading "Climatizare & Dotări" [level=4] [ref=e746]
+              - paragraph [ref=e747]: Sisteme HVAC, ventilație, echipamente încorporate, stare funcționare.
+          - generic [ref=e748]:
+            - img [ref=e750]
+            - generic [ref=e753]:
+              - heading "Releveu Fotografic Complet" [level=4] [ref=e754]
+              - paragraph [ref=e755]: Fotografii detaliate ale fiecărui element inspectat, inclusiv imagini termografice.
+    - generic [ref=e757]:
+      - generic [ref=e758]:
+        - paragraph [ref=e759]: Prețuri Transparente
+        - heading "Alege Pachetul Potrivit" [level=2] [ref=e760]
+        - paragraph [ref=e761]: Prețuri clare, fără surprize. Fiecare pachet include raport detaliat cu fotografii și recomandări de remediere.
+      - generic [ref=e763]:
+        - generic [ref=e764]:
+          - generic:
+            - img
+          - generic [ref=e766]:
+            - generic [ref=e767]:
+              - img [ref=e769]
+              - generic [ref=e771]:
+                - heading "Esențial" [level=3] [ref=e772]
+                - paragraph [ref=e773]: Ideal pentru apartamente 1-2 camere
+            - generic [ref=e775]:
+              - generic [ref=e776]: de la
+              - generic [ref=e777]: "350"
+              - generic [ref=e778]: EUR
+            - list [ref=e780]:
+              - listitem [ref=e781]:
+                - img [ref=e783]
+                - generic [ref=e785]: Verificare structurală de bază
+              - listitem [ref=e786]:
+                - img [ref=e788]
+                - generic [ref=e790]: Verificare instalații
+              - listitem [ref=e791]:
+                - img [ref=e793]
+                - generic [ref=e795]: Raport sumar (10-15 pagini)
+              - listitem [ref=e796]:
+                - img [ref=e798]
+                - generic [ref=e800]: Livrare în 72h
+            - link "Solicită Oferta" [ref=e801] [cursor=pointer]:
+              - /url: "#contact"
+              - text: Solicită Oferta
+              - img [ref=e802]
+        - generic [ref=e804]:
+          - generic:
+            - img
+          - generic [ref=e807]:
+            - img [ref=e808]
+            - text: Recomandat
+          - generic [ref=e810]:
+            - generic [ref=e811]:
+              - img [ref=e813]
+              - generic [ref=e815]:
+                - heading "Complet" [level=3] [ref=e816]
+                - paragraph [ref=e817]: Cel mai popular — apartamente și case
+            - generic [ref=e819]:
+              - generic [ref=e820]: de la
+              - generic [ref=e821]: "500"
+              - generic [ref=e822]: EUR
+            - list [ref=e824]:
+              - listitem [ref=e825]:
+                - img [ref=e827]
+                - generic [ref=e829]: Verificare structurală completă
+              - listitem [ref=e830]:
+                - img [ref=e832]
+                - generic [ref=e834]: Scanare termografică Flir E60
+              - listitem [ref=e835]:
+                - img [ref=e837]
+                - generic [ref=e839]: Verificare instalații complete
+              - listitem [ref=e840]:
+                - img [ref=e842]
+                - generic [ref=e844]: Determinare umiditate
+              - listitem [ref=e845]:
+                - img [ref=e847]
+                - generic [ref=e849]: Raport detaliat (25-30 pagini)
+              - listitem [ref=e850]:
+                - img [ref=e852]
+                - generic [ref=e854]: Estimare costuri remediere
+              - listitem [ref=e855]:
+                - img [ref=e857]
+                - generic [ref=e859]: Consultanță negociere preț
+            - link "Solicită Oferta" [ref=e860] [cursor=pointer]:
+              - /url: "#contact"
+              - text: Solicită Oferta
+              - img [ref=e861]
+        - generic [ref=e863]:
+          - generic:
+            - img
+          - generic [ref=e865]:
+            - generic [ref=e866]:
+              - img [ref=e868]
+              - generic [ref=e871]:
+                - heading "Premium" [level=3] [ref=e872]
+                - paragraph [ref=e873]: Vile, proprietăți premium, investiții
+            - generic [ref=e875]:
+              - generic [ref=e876]: de la
+              - generic [ref=e877]: "800"
+              - generic [ref=e878]: EUR
+            - list [ref=e880]:
+              - listitem [ref=e881]:
+                - img [ref=e883]
+                - generic [ref=e885]: Tot ce include Pachetul Complet
+              - listitem [ref=e886]:
+                - img [ref=e888]
+                - generic [ref=e890]: Verificare documentație tehnică
+              - listitem [ref=e891]:
+                - img [ref=e893]
+                - generic [ref=e895]: Testare grad beton (sclerometru)
+              - listitem [ref=e896]:
+                - img [ref=e898]
+                - generic [ref=e900]: Raport extins (35+ pagini)
+              - listitem [ref=e901]:
+                - img [ref=e903]
+                - generic [ref=e905]: Asistență post-achiziție 30 zile
+              - listitem [ref=e906]:
+                - img [ref=e908]
+                - generic [ref=e910]: Consultație video follow-up
+            - link "Solicită Oferta" [ref=e911] [cursor=pointer]:
+              - /url: "#contact"
+              - text: Solicită Oferta
+              - img [ref=e912]
+      - paragraph [ref=e914]: Prețuri valabile pentru București și Ilfov. Pentru proprietăți >350mp, solicită ofertă personalizată.
+    - generic [ref=e915]:
+      - generic:
+        - img
+      - generic:
+        - img
+      - generic [ref=e917]:
+        - generic [ref=e918]:
+          - heading "Protejează-ți investiția cu o inspecție profesională." [level=3] [ref=e919]
+          - paragraph [ref=e920]: Alege pachetul potrivit și programează inspecția astăzi.
+        - generic [ref=e921]:
+          - link "0769 833 269" [ref=e922] [cursor=pointer]:
+            - /url: tel:+40769833269
+            - img [ref=e923]
+            - text: 0769 833 269
+          - link "Programează Acum" [ref=e925] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Programează Acum
+            - img [ref=e926]
+    - generic [ref=e929]:
+      - generic [ref=e931]:
+        - generic [ref=e932]:
+          - paragraph [ref=e933]: Portofoliu Inspecții
+          - heading "Proiecte de Inspecție Tehnică Recente" [level=2] [ref=e934]
+          - paragraph [ref=e935]: Exemple reale de inspecții tehnice imobiliare realizate în București și Ilfov, cu defecte identificate și bani economisiți pentru clienții noștri.
+        - link "Vezi toate proiectele" [ref=e936] [cursor=pointer]:
+          - /url: "#contact"
+          - text: Vezi toate proiectele
+          - img [ref=e937]
+      - generic [ref=e940]:
+        - generic [ref=e941]:
+          - generic [ref=e942]:
+            - img "Apartament 3 Camere — Sector 1, București — Inspecție Pre-Achiziție — inspecție tehnică imobiliară" [ref=e943]
+            - img [ref=e946]
+            - generic [ref=e949]: Inspecție Pre-Achiziție
+          - generic [ref=e950]:
+            - heading "Apartament 3 Camere — Sector 1, București" [level=3] [ref=e951]
+            - paragraph [ref=e952]: Infiltrații la nivelul acoperișului și punți termice la tâmplăria exterioară, detectate prin scanare termografică Flir E60.
+            - paragraph [ref=e953]: Apartament în bloc din 2018, etaj 8/10. Probleme de hidroizolație la acoperiș identificate la scanarea termografică și confirmate cu higrometrul de contact.
+            - generic [ref=e956]: €8.500 negociat din prețul de achiziție
+        - generic [ref=e957]:
+          - generic [ref=e958]:
+            - img "Vilă P+1 — Pipera, Ilfov — Inspecție Completă + Verificare Instalații — inspecție tehnică imobiliară" [ref=e959]
+            - img [ref=e962]
+            - generic [ref=e965]: Inspecție Completă + Verificare Instalații
+          - generic [ref=e966]:
+            - heading "Vilă P+1 — Pipera, Ilfov" [level=3] [ref=e967]
+            - paragraph [ref=e968]: Defecte hidroizolație fundație radier, tâmplărie cu montaj defectuos și instalație electrică subdimensionată.
+            - paragraph [ref=e969]: Vilă nou construită, 280mp. Am identificat 14 probleme tehnice majore, inclusiv lipsa protecției la umezeală a fundației și cablaj electric necorespunzător normativelor.
+            - generic [ref=e972]: €12.000 estimare costuri remediere
+        - generic [ref=e973]:
+          - generic [ref=e974]:
+            - img "Apartament Nou — Aviatiei, București — Recepție Apartament de la Dezvoltator — inspecție tehnică imobiliară" [ref=e975]
+            - img [ref=e978]
+            - generic [ref=e981]: Recepție Apartament de la Dezvoltator
+          - generic [ref=e982]:
+            - heading "Apartament Nou — Aviatiei, București" [level=3] [ref=e983]
+            - paragraph [ref=e984]: Punți termice la 3 ferestre, defecte instalații sanitare și fisuri în tencuială la 2 pereți interiori.
+            - paragraph [ref=e985]: Apartament 2 camere, bloc nou 2024. Raportul nostru a servit ca bază pentru solicitarea de remediere în perioada de garanție a dezvoltatorului.
+            - generic [ref=e988]: Remediat integral de dezvoltator în garanție
+    - generic [ref=e990]:
+      - generic [ref=e991]:
+        - paragraph [ref=e992]: Întrebări Frecvente
+        - heading "Răspunsuri la Întrebări Frecvente" [level=2] [ref=e993]
+      - generic [ref=e995]:
+        - generic [ref=e996]:
+          - button "Ce este o inspecție tehnică imobiliară?" [expanded] [ref=e997]:
+            - generic [ref=e998]: Ce este o inspecție tehnică imobiliară?
+            - img [ref=e999]
+          - paragraph [ref=e1001]: O inspecție tehnică imobiliară este o evaluare profesională a stării unei proprietăți, care verifică structura, instalațiile, finisajele și identifică problemele ascunse care nu sunt vizibile cu ochiul liber. Raportul detaliat te ajută să iei o decizie informată înainte de achiziție.
+        - generic [ref=e1002]:
+          - button "Cât durează o inspecție și când primesc raportul?" [ref=e1003]:
+            - generic [ref=e1004]: Cât durează o inspecție și când primesc raportul?
+            - img [ref=e1005]
+          - paragraph [ref=e1007]: Inspecția pe teren durează între 2 și 4 ore, în funcție de dimensiunea proprietății. Raportul detaliat cu fotografii și recomandări este livrat în format digital în maxim 48 de ore.
+        - generic [ref=e1008]:
+          - button "Ce echipamente folosiți?" [ref=e1009]:
+            - generic [ref=e1010]: Ce echipamente folosiți?
+            - img [ref=e1011]
+          - paragraph [ref=e1013]: "Utilizăm echipamente profesionale de ultimă generație: camera termografică Flir E60 pentru detectarea punților termice, higrometrul Flir MR160 pentru măsurarea umidității, sclerometru pentru testarea betonului, și echipamente specializate pentru verificarea instalațiilor."
+        - generic [ref=e1014]:
+          - button "Pot fi prezent în timpul inspecției?" [ref=e1015]:
+            - generic [ref=e1016]: Pot fi prezent în timpul inspecției?
+            - img [ref=e1017]
+          - paragraph [ref=e1019]: Absolut! Recomandăm prezența dumneavoastră pentru a vedea în timp real ce descoperim și pentru a primi explicații detaliate. Consultanța se face în prezența dumneavoastră, fără stres.
+        - generic [ref=e1020]:
+          - button "Ce se întâmplă dacă se găsesc probleme?" [ref=e1021]:
+            - generic [ref=e1022]: Ce se întâmplă dacă se găsesc probleme?
+            - img [ref=e1023]
+          - paragraph [ref=e1025]: Raportul include o estimare a costurilor de remediere pentru fiecare problemă identificată. Aceste informații vă oferă putere de negociere a prețului proprietății sau vă ajută să decideți dacă achiziția merită.
+    - generic [ref=e1026]:
+      - img "Contactează Core Strategic Consulting — programează inspecție tehnică imobiliară în București" [ref=e1028]
+      - generic [ref=e1031]:
+        - generic [ref=e1032]:
+          - paragraph [ref=e1033]: Contact
+          - heading "Programează o Inspecție Astăzi" [level=2] [ref=e1034]
+          - paragraph [ref=e1035]: Nu lăsa cea mai mare investiție a vieții tale la voia întâmplării. Contactează-ne pentru o consultație gratuită.
+          - generic [ref=e1036]:
+            - link "Telefon 0769 833 269" [ref=e1037] [cursor=pointer]:
+              - /url: tel:+40769833269
+              - img [ref=e1039]
+              - generic [ref=e1041]:
+                - generic [ref=e1042]: Telefon
+                - text: 0769 833 269
+            - link "Email contact@corestrategicconsulting.com" [ref=e1043] [cursor=pointer]:
+              - /url: mailto:contact@corestrategicconsulting.com
+              - img [ref=e1045]
+              - generic [ref=e1048]:
+                - generic [ref=e1049]: Email
+                - text: contact@corestrategicconsulting.com
+            - generic [ref=e1050]:
+              - img [ref=e1052]
+              - generic [ref=e1055]:
+                - generic [ref=e1056]: Zona de acoperire
+                - text: București & Ilfov
+        - generic [ref=e1058]:
+          - heading "Solicită o Consultanță" [level=3] [ref=e1059]
+          - generic [ref=e1060]:
+            - generic [ref=e1061]:
+              - generic [ref=e1062]: Nume complet
+              - textbox "Numele dumneavoastră" [ref=e1063]
+            - generic [ref=e1064]:
+              - generic [ref=e1065]: Telefon
+              - textbox "07XX XXX XXX" [ref=e1066]
+            - generic [ref=e1067]:
+              - generic [ref=e1068]: Tip proprietate
+              - combobox [ref=e1069]:
+                - option "Selectează tipul" [selected]
+                - option "Apartament"
+                - option "Casă / Vilă"
+                - option "Spațiu Comercial"
+                - option "Altele"
+            - generic [ref=e1070]:
+              - generic [ref=e1071]: Mesaj (opțional)
+              - textbox "Detalii despre proprietate..." [ref=e1072]
+            - button "Trimite Solicitarea" [ref=e1073]:
+              - text: Trimite Solicitarea
+              - img [ref=e1074]
+  - contentinfo [ref=e1076]:
+    - generic [ref=e1077]:
+      - generic [ref=e1078]:
+        - generic [ref=e1079]:
+          - img "Core Strategic Consulting" [ref=e1081]
+          - paragraph [ref=e1082]: Inspecție tehnică imobiliară profesională în București și Ilfov. Protejăm investiția ta cu echipamente profesionale și experiență de 15+ ani.
+          - generic [ref=e1083]:
+            - link "0769 833 269" [ref=e1084] [cursor=pointer]:
+              - /url: tel:+40769833269
+              - img [ref=e1085]
+              - text: 0769 833 269
+            - link "contact@corestrategicconsulting.com" [ref=e1087] [cursor=pointer]:
+              - /url: mailto:contact@corestrategicconsulting.com
+              - img [ref=e1088]
+              - text: contact@corestrategicconsulting.com
+            - generic [ref=e1091]:
+              - img [ref=e1092]
+              - text: București & Ilfov
+        - generic [ref=e1095]:
+          - heading "Servicii" [level=4] [ref=e1096]
+          - list [ref=e1097]:
+            - listitem [ref=e1098]:
+              - link "Inspecție Tehnică" [ref=e1099] [cursor=pointer]:
+                - /url: "#servicii"
+            - listitem [ref=e1100]:
+              - link "Verificare Structurală" [ref=e1101] [cursor=pointer]:
+                - /url: "#servicii"
+            - listitem [ref=e1102]:
+              - link "Scanare Termografică" [ref=e1103] [cursor=pointer]:
+                - /url: "#servicii"
+            - listitem [ref=e1104]:
+              - link "Verificare Instalații" [ref=e1105] [cursor=pointer]:
+                - /url: "#servicii"
+            - listitem [ref=e1106]:
+              - link "Determinare Umiditate" [ref=e1107] [cursor=pointer]:
+                - /url: "#servicii"
+            - listitem [ref=e1108]:
+              - link "Expertize Tehnice" [ref=e1109] [cursor=pointer]:
+                - /url: "#servicii"
+        - generic [ref=e1110]:
+          - heading "Companie" [level=4] [ref=e1111]
+          - list [ref=e1112]:
+            - listitem [ref=e1113]:
+              - link "Despre Noi" [ref=e1114] [cursor=pointer]:
+                - /url: "#despre"
+            - listitem [ref=e1115]:
+              - link "Prețuri" [ref=e1116] [cursor=pointer]:
+                - /url: "#preturi"
+            - listitem [ref=e1117]:
+              - link "Portofoliu" [ref=e1118] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e1119]:
+              - link "FAQ" [ref=e1120] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=e1121]:
+              - link "Blog" [ref=e1122] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e1123]:
+              - link "Contact" [ref=e1124] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e1125]:
+          - heading "Program" [level=4] [ref=e1126]
+          - generic [ref=e1127]:
+            - paragraph [ref=e1128]: "Luni - Vineri: 08:00 - 18:00"
+            - paragraph [ref=e1129]: "Sâmbătă: 09:00 - 14:00"
+            - paragraph [ref=e1130]: "Duminică: Închis"
+          - link "Programează Acum" [ref=e1132] [cursor=pointer]:
+            - /url: "#contact"
+      - generic [ref=e1133]:
+        - paragraph [ref=e1134]: © 2026 Core Strategic Consulting. Toate drepturile rezervate.
+        - generic [ref=e1135]:
+          - link "Politica de Confidențialitate" [ref=e1136] [cursor=pointer]:
+            - /url: "#"
+          - link "Termeni și Condiții" [ref=e1137] [cursor=pointer]:
+            - /url: "#"
+          - link "ANPC" [ref=e1138] [cursor=pointer]:
+            - /url: "#"
+  - link "Contactează-ne pe WhatsApp" [ref=e1139] [cursor=pointer]:
+    - /url: https://wa.me/40769833269?text=Bun%C4%83%20ziua!%20Doresc%20informa%C8%9Bii%20despre%20o%20inspec%C8%9Bie%20tehnic%C4%83%20imobiliar%C4%83.
+    - img [ref=e1140]
+  - link "Contactează-ne pe WhatsApp" [ref=e1142] [cursor=pointer]:
+    - /url: https://wa.me/40769833269
+    - img [ref=e1143]

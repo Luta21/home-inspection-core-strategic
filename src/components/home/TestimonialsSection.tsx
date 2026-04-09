@@ -182,7 +182,7 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-28 lg:py-36">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-14 sm:py-16 md:py-20 lg:py-28">
       {/* Background decorative elements */}
       <div className="pointer-events-none absolute left-0 top-0 h-full w-full">
         {/* Large faded quote in background */}
@@ -196,9 +196,9 @@ export function TestimonialsSection() {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[800px] w-[800px] rounded-full bg-gold/[0.015] blur-[150px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="testimonials-heading mb-20 text-center">
+        <div className="testimonials-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Recenzii Clienți</p>
           <h2 className="mb-4 font-[var(--font-playfair)] text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-white">
             Ce Spun Clienții Despre Inspecțiile{' '}
@@ -212,7 +212,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* Cards grid */}
-        <div className="testimonials-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="testimonials-grid grid gap-4 sm:gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
           {TESTIMONIALS.map((testimonial, i) => (
             <div
               key={i}
@@ -234,7 +234,7 @@ export function TestimonialsSection() {
                 style={{ background: 'radial-gradient(circle at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 70%)' }}
               />
 
-              <div className="relative z-10 p-8 lg:p-9">
+              <div className="relative z-10 p-6 md:p-7 lg:p-8">
                 {/* Quote mark + saved badge row */}
                 <div className="mb-5 flex items-start justify-between">
                   <span className="testimonial-quote font-[var(--font-playfair)] text-5xl font-bold leading-none text-gold/25 transition-colors duration-300 group-hover:text-gold/40">
@@ -253,12 +253,12 @@ export function TestimonialsSection() {
                 </div>
 
                 {/* Testimonial text */}
-                <p className="mb-8 text-[15px] leading-[1.85] text-grey-200/90">
+                <p className="mb-6 text-[15px] leading-[1.85] text-grey-200/90 md:mb-8">
                   {testimonial.text}
                 </p>
 
                 {/* Author */}
-                <div className="flex items-center gap-4 border-t border-grey-500/10 pt-6">
+                <div className="flex items-center gap-4 border-t border-grey-500/10 pt-5 md:pt-6">
                   <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-gold/15 ring-offset-2 ring-offset-black-elevated transition-all duration-300 group-hover:ring-gold/30">
                     <Image src={testimonial.image} alt={testimonial.name} fill className="object-cover" sizes="48px" />
                   </div>

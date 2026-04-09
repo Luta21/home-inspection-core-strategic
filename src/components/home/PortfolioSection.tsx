@@ -61,9 +61,9 @@ export function PortfolioSection() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="portfolio-heading mb-16">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-rich py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="portfolio-heading mb-10 sm:mb-12 lg:mb-16">
           <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
             <div>
               <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">Portofoliu Inspecții</p>
@@ -83,11 +83,11 @@ export function PortfolioSection() {
           <div className="mt-6 h-[2px] w-16 bg-gold" />
         </div>
 
-        <div className="portfolio-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="portfolio-grid grid gap-4 sm:gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8">
           {PROJECTS.map((project, i) => (
             <div
               key={i}
-              className="portfolio-card group relative overflow-hidden rounded-xl border border-grey-500/20 bg-black-elevatedtransition-all duration-500 hover:border-gold/30"
+              className="portfolio-card group relative overflow-hidden rounded-xl border border-grey-500/20 bg-black-elevated transition-all duration-500 hover:border-gold/30"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
@@ -97,7 +97,7 @@ export function PortfolioSection() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black-pure/70transition-opacity duration-400 group-hover:opacity-100">
+                <div className="absolute inset-0 flex items-center justify-center bg-black-pure/70 opacity-0 transition-opacity duration-400 group-hover:opacity-100">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gold bg-gold/10">
                     <ArrowUpRight className="h-5 w-5 text-gold" />
                   </div>
@@ -109,7 +109,7 @@ export function PortfolioSection() {
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-6 md:p-7 lg:p-8">
                 <h3 className="mb-2 font-[var(--font-playfair)] text-lg font-semibold text-white">
                   {project.title}
                 </h3>

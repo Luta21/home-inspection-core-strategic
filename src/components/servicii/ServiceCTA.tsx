@@ -30,7 +30,7 @@ export function ServiceCTA({ headline }: ServiceCTAProps) {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="grain-overlay relative overflow-hidden bg-black-pure py-24 lg:py-32">
+    <section ref={sectionRef} className="grain-overlay relative overflow-hidden bg-black-pure py-14 sm:py-16 md:py-20 lg:py-28">
       <div className="relative z-10 mx-auto max-w-3xl px-5 text-center lg:px-8">
         <div className="service-cta-content">
           <div className="mx-auto mb-8 h-[2px] w-16 bg-gold" />

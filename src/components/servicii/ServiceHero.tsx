@@ -155,7 +155,7 @@ export function ServiceHero({ service }: ServiceHeroProps) {
       />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 py-32 text-center lg:px-8 lg:py-40">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-28 pb-16 text-center sm:px-6 sm:pt-32 sm:pb-20 md:pt-36 md:pb-24 lg:px-8 lg:pt-40 lg:pb-32">
         {/* Gold accent line */}
         <div
           className="hero-gold-line mx-auto mb-8 h-[2px] w-16 origin-center scale-x-0 bg-gold"

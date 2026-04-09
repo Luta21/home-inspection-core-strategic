@@ -54,11 +54,11 @@ export function ServiceReportPreview({ service }: ServiceReportPreviewProps) {
   if (service.reportHighlights.length === 0) return null
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-elevated py-24 lg:py-32">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-elevated py-14 sm:py-16 md:py-20 lg:py-28">
       <div className="absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-gold/[0.03] blur-3xl" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="report-preview-heading mb-16 text-center">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="report-preview-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
             Raportul Tău
           </p>
@@ -69,7 +69,7 @@ export function ServiceReportPreview({ service }: ServiceReportPreviewProps) {
           <div className="mx-auto mt-6 h-[2px] w-16 bg-gold" />
         </div>
 
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-8 md:gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="report-preview-mockup relative" style={{ perspective: '1000px' }}>
             <div className="relative overflow-hidden rounded-xl bg-black-soft p-6 shadow-2xl shadow-black/50">
               <div className="mb-6 border-b border-grey-500/20 pb-6">

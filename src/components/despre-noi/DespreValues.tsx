@@ -64,10 +64,10 @@ export function DespreValues() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-28 lg:py-36">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="values-heading mb-20 text-center">
+        <div className="values-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
             Valorile Noastre
           </p>
@@ -85,7 +85,7 @@ export function DespreValues() {
             return (
               <div
                 key={value.title}
-                className="value-card group rounded-xl border border-gold/10 bg-black-elevated/50 p-8 transition-colors duration-500 hover:border-gold/25"
+                className="value-card group rounded-xl border border-gold/10 bg-black-elevated/50 p-6 md:p-7 lg:p-8 transition-colors duration-500 hover:border-gold/25"
               >
                 {/* Icon container */}
                 <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gold/[0.06]">

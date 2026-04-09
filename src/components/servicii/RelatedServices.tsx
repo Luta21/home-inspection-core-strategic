@@ -66,10 +66,10 @@ export function RelatedServices({ currentSlug }: RelatedServicesProps) {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section ref={sectionRef} className="relative overflow-hidden bg-black-soft py-14 sm:py-16 md:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="related-heading mb-16 text-center">
+        <div className="related-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
             Servicii Complementare
           </p>
@@ -80,7 +80,7 @@ export function RelatedServices({ currentSlug }: RelatedServicesProps) {
         </div>
 
         {/* Cards */}
-        <div className="related-grid grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="related-grid grid gap-4 sm:grid-cols-2 sm:gap-5 md:gap-6 lg:grid-cols-3 lg:gap-8">
           {related.map((service, i) => {
             const Icon = getIcon(service.icon)
             return (

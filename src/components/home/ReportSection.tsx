@@ -87,13 +87,13 @@ export function ReportSection() {
   }, { scope: sectionRef })
 
   return (
-    <section ref={sectionRef} id="raport" className="relative overflow-hidden bg-black-elevated py-24 lg:py-32">
+    <section ref={sectionRef} id="raport" className="relative overflow-hidden bg-black-elevated py-14 sm:py-16 md:py-20 lg:py-28">
       {/* Decorative bg accent */}
       <div className="report-bg-accent absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-gold/[0.03] blur-3xl" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="report-heading mb-16 text-center">
+        <div className="report-heading mb-10 text-center sm:mb-12 lg:mb-16">
           <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">
             Raport Tehnic Rezidențial
           </p>
@@ -111,10 +111,10 @@ export function ReportSection() {
         </div>
 
         {/* Report preview + features */}
-        <div className="mb-20 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="mb-12 grid items-center gap-8 md:mb-16 md:gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Report mockup */}
           <div className="report-mockup relative">
-            <div className="relative overflow-hidden rounded-xl border border-gold/20 bg-black-soft p-6 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+            <div className="relative overflow-hidden rounded-xl border border-gold/20 bg-black-soft p-6 shadow-[0_20px_60px_rgba(0,0,0,0.5)] md:p-7 lg:p-8">
               {/* Report header mockup */}
               <div className="mb-6 border-b border-grey-500/20 pb-6">
                 <div className="flex items-center gap-4">
@@ -180,7 +180,7 @@ export function ReportSection() {
             <h3 className="mb-2 font-[var(--font-playfair)] text-xl font-semibold text-white">
               Ce Conține Raportul de Inspecție
             </h3>
-            <p className="mb-8 text-sm text-grey-300">
+            <p className="mb-6 text-sm text-grey-300 md:mb-8">
               Raportul tehnic rezidențial folosește sistemul de clasificare
               IN (Inspectat) / NI (Neinspectat) / NP (Nu este prezent) / D (Defect)
               pentru fiecare element verificat, oferindu-vă o imagine clară și completă.
@@ -195,7 +195,7 @@ export function ReportSection() {
               ))}
             </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row md:mt-8">
               <a
                 href="#contact"
                 className="btn-shimmer relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-md px-6 py-3 text-sm font-bold uppercase tracking-wider text-black-rich transition-all hover:-translate-y-0.5"
@@ -217,14 +217,14 @@ export function ReportSection() {
 
         {/* Report sections grid */}
         <div>
-          <h3 className="mb-8 text-center font-[var(--font-playfair)] text-xl font-semibold text-white">
+          <h3 className="mb-6 text-center font-[var(--font-playfair)] text-xl font-semibold text-white md:mb-8">
             Cele 17 Capitole Verificate în Fiecare Inspecție
           </h3>
-          <div className="report-sections-grid grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="report-sections-grid grid gap-4 sm:grid-cols-2 sm:gap-5 md:gap-6 lg:grid-cols-3 lg:gap-8">
             {REPORT_SECTIONS.map((section, i) => (
               <div
                 key={i}
-                className="report-section-card group flex gap-4 rounded-lg border border-grey-500/15 bg-black-soft p-5transition-all duration-300 hover:border-gold/20 hover:bg-black-muted"
+                className="report-section-card group flex gap-4 rounded-lg border border-grey-500/15 bg-black-soft p-4 transition-all duration-300 hover:border-gold/20 hover:bg-black-muted md:p-5 lg:p-6"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold/10 transition-colors group-hover:bg-gold/20">
                   <section.icon className="h-4 w-4 text-gold" />
